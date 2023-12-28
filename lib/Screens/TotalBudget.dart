@@ -299,8 +299,9 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Windows", style: Heading5()),
-                    Text("6", style: Heading5()),
-                    Text("40000", style: Heading5()),
+                    Text("${CalculateWindow().toString()}", style: Heading5()),
+                    Text("${CalculateWindowCost().toString()}",
+                        style: Heading5()),
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -308,16 +309,8 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Doors", style: Heading5()),
-                    Text("15", style: Heading5()),
-                    Text("90000", style: Heading5()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Labour", style: Heading5()),
-                    Text("90000", style: Heading5()),
+                    Text("${CalculateDoor().toString()}", style: Heading5()),
+                    Text("${CalculateDoorCost()}", style: Heading5()),
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -325,7 +318,8 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Total", style: Heading5Orange()),
-                    Text("94000", style: Heading5Orange()),
+                    Text("${totalCostWD().toString()}",
+                        style: Heading5Orange()),
                   ],
                 ),
               ]),
@@ -488,6 +482,11 @@ class _TotalBudgetState extends State<TotalBudget> {
     });
   }
 
+  double totalContructionCost() {
+    double costPerSqft = 2000;
+    return (widget.rawData["coverdArea"] * costPerSqft);
+  }
+
 // ============== Calculate Total Briks =================
   double calculateBriks() {
     double BriksPerSqft = 8; // how many briks use in 1sq.ft area
@@ -587,6 +586,41 @@ class _TotalBudgetState extends State<TotalBudget> {
   //================================================================
   //========================= utilities ============================
   //================================================================
+
+  //================================================================
+  //======================== Doors & Windows =======================
+  //================================================================
+
+  double CalculateDoor() {
+    double numOfDoors = (widget.rawData['BedRooms'] +
+        widget.rawData['BathRooms'] +
+        widget.rawData['DrawingRooms'] +
+        widget.rawData['LivingRooms']);
+    return numOfDoors;
+  }
+
+  double CalculateDoorCost() {
+    double costPerDoor = 8000; //Avg cost per Door
+    return (CalculateDoor() * costPerDoor);
+  }
+
+  double CalculateWindow() {
+    double numOfDoors =
+        (widget.rawData['BedRooms'] + widget.rawData['LivingRooms']);
+    return (numOfDoors);
+  }
+
+  double CalculateWindowCost() {
+    double costPerWindow = 200; //Avg cost per Window
+    return (CalculateWindow() * costPerWindow);
+  }
+
+  double totalCostWD() {
+    double total = (CalculateWindowCost() + CalculateDoorCost());
+    return (total);
+  }
+
+  // ==================== Total cost on colouring ===============
 }
 
 //  totalArea: 1.0
