@@ -1,7 +1,7 @@
 import 'package:constructoncostestimator/Screens/Home.dart';
 
-import 'package:constructoncostestimator/Screens/SplashScreen.dart';
-import 'package:constructoncostestimator/Screens/test.dart';
+// import 'package:constructoncostestimator/Screens/SplashScreen.dart';
+// import 'package:constructoncostestimator/Screens/test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
