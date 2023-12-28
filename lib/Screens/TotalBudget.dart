@@ -587,6 +587,17 @@ class _TotalBudgetState extends State<TotalBudget> {
   //========================= utilities ============================
   //================================================================
 
+  double CalculateUtilitiesCost() {
+    double plumbingcostperfeet = 50;
+    double elictercitycost = (widget.rawData['BedRooms'] * 7 +
+        widget.rawData['LivingRooms'] * 9 +
+        widget.rawData['BathRooms'] * 3 +
+        widget.rawData['DrawingRooms'] * 9);
+
+    double plumbingcost = ((floorArea() / 1.3) * plumbingcostperfeet);
+    return ((elictercitycost * 10) + plumbingcost);
+  }
+
   //================================================================
   //======================== Doors & Windows =======================
   //================================================================
