@@ -1,0 +1,188 @@
+import 'package:constructoncostestimator/Components/Button.dart';
+import 'package:constructoncostestimator/Components/TextField.dart';
+import 'package:constructoncostestimator/Components/TextStyels.dart';
+import 'package:constructoncostestimator/Screens/TotalBudget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+
+Map<String, dynamic> data = {};
+
+class Home extends StatefulWidget {
+  const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  TextEditingController _totalSizeController = TextEditingController();
+  TextEditingController _coverdSizeController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
+
+  OnButtonPressed() {
+    if (_formKey.currentState!.validate()) {
+      data['totalArea'] = double.parse(_totalSizeController.text);
+      data['coverdArea'] = double.parse(_coverdSizeController.text);
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => InputScreen1()));
+    } else {
+      EasyLoading.showToast("field Empty");
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xff2a4151),
+      body: SafeArea(
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+              Text(
+                "Plot Area ",
+                style: Heading1(),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+              InputFields(
+                controller: _totalSizeController,
+                fieldText: "Enter total Size in Sq.ft",
+                validation: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "please enter some value";
+                  }
+                  return null;
+                },
+              ),
+              InputFields(
+                controller: _coverdSizeController,
+                fieldText: "Enter Coverd Size in Sq.ft",
+                validation: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "please enter some value";
+                  }
+                  return null;
+                },
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+              Button(text: "Next", method: OnButtonPressed),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class InputScreen1 extends StatefulWidget {
+  const InputScreen1({super.key});
+
+  @override
+  State<InputScreen1> createState() => _InputScreen1State();
+}
+
+class _InputScreen1State extends State<InputScreen1> {
+  // ==============  Rooms ========================
+  TextEditingController _bedRoomsController = TextEditingController();
+  TextEditingController _bathRoomsController = TextEditingController();
+  TextEditingController _kitchensController = TextEditingController();
+  TextEditingController _livingRoomsController = TextEditingController();
+  TextEditingController _drawingRoomsController = TextEditingController();
+
+  final _formKey = GlobalKey<FormState>();
+  OnButtonPressed() {
+    if (_formKey.currentState!.validate()) {
+      data['BedRooms'] = int.parse(_bedRoomsController.text);
+      data['BathRooms'] = int.parse(_bathRoomsController.text);
+      data['Kitchens'] = int.parse(_kitchensController.text);
+      data['LivingRooms'] = int.parse(_livingRoomsController.text);
+      data['DrawingRooms'] = int.parse(_drawingRoomsController.text);
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => TotalBudget(
+                    rawData: data,
+                  )));
+    } else {
+      EasyLoading.showToast("Field is Empty");
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xff2a4151),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+                Text(
+                  "Rooms Detail",
+                  style: Heading1(),
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+                InputFields(
+                  controller: _bedRoomsController,
+                  fieldText: "BedRooms",
+                  validation: (value) {
+                    if (value == null || value.isEmpty) {
+                      return "please enter some value";
+                    }
+                    return null;
+                  },
+                ),
+                InputFields(
+                  controller: _bathRoomsController,
+                  fieldText: "BathRooms",
+                  validation: (value) {
+                    if (value == null || value.isEmpty) {
+                      return "please enter some value";
+                    }
+                    return null;
+                  },
+                ),
+                InputFields(
+                  controller: _kitchensController,
+                  fieldText: "Kitchens",
+                  validation: (value) {
+                    if (value == null || value.isEmpty) {
+                      return "please enter some value";
+                    }
+                    return null;
+                  },
+                ),
+                InputFields(
+                  controller: _livingRoomsController,
+                  fieldText: "LivingRooms ",
+                  validation: (value) {
+                    if (value == null || value.isEmpty) {
+                      return "please enter some value";
+                    }
+                    return null;
+                  },
+                ),
+                InputFields(
+                  controller: _drawingRoomsController,
+                  fieldText: "DrawingRooms",
+                  validation: (value) {
+                    if (value == null || value.isEmpty) {
+                      return "please enter some value";
+                    }
+                    return null;
+                  },
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.13),
+                Button(text: "Next", method: OnButtonPressed),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.13),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
