@@ -185,19 +185,10 @@ class _TotalBudgetState extends State<TotalBudget> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Total", style: Heading5()),
-                    Text("${floorArea()} Area", style: Heading5()),
+                    Text("Material & labour", style: Heading5()),
+                    Text("${floorArea().toString()} Area", style: Heading5()),
                     Text("${calculateFloorCost().toString()}",
                         style: Heading5()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Ciment", style: Heading5()),
-                    Text("600 Bags", style: Heading5()),
-                    Text("5060000", style: Heading5()),
                   ],
                 ),
               ]),
@@ -229,47 +220,48 @@ class _TotalBudgetState extends State<TotalBudget> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Stuf", style: Heading5()),
+                    Text("Utilities", style: Heading5()),
                     Text("30 items", style: Heading5()),
-                    Text("40000", style: Heading5()),
+                    Text("${CalculateUtilitiesCost().toString()}",
+                        style: Heading5()),
                   ],
                 ),
               ]),
             ),
             // ================ Utitlites Instalation Cost ====================
-            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-            Text(
-              "Utitlites Instalation Cost",
-              style: Heading2(),
-            ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Color(0xff192730),
-              ),
-              padding: EdgeInsets.all(10.0),
-              width: MediaQuery.of(context).size.width * 0.95,
-              child: Column(children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Item", style: Heading5Orange()),
-                    Text("Quantity", style: Heading5Orange()),
-                    Text("Cost", style: Heading5Orange()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("mirror", style: Heading5()),
-                    Text("30 items", style: Heading5()),
-                    Text("40000", style: Heading5()),
-                  ],
-                ),
-              ]),
-            ),
+            // SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+            // Text(
+            //   "Utitlites Instalation Cost",
+            //   style: Heading2(),
+            // ),
+            // SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+            // Container(
+            //   decoration: BoxDecoration(
+            //     borderRadius: BorderRadius.circular(10),
+            //     color: Color(0xff192730),
+            //   ),
+            //   padding: EdgeInsets.all(10.0),
+            //   width: MediaQuery.of(context).size.width * 0.95,
+            //   child: Column(children: [
+            //     Row(
+            //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //       children: [
+            //         Text("Item", style: Heading5Orange()),
+            //         Text("Quantity", style: Heading5Orange()),
+            //         Text("Cost", style: Heading5Orange()),
+            //       ],
+            //     ),
+            //     SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+            //     Row(
+            //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //       children: [
+            //         Text("Utilities", style: Heading5()),
+            //         Text("30 items", style: Heading5()),
+            //         Text("40000", style: Heading5()),
+            //       ],
+            //     ),
+            //   ]),
+            // ),
 
             // ================ Doors and Windows Cost ====================
             SizedBox(height: MediaQuery.of(context).size.height * 0.04),
@@ -310,7 +302,8 @@ class _TotalBudgetState extends State<TotalBudget> {
                   children: [
                     Text("Doors", style: Heading5()),
                     Text("${CalculateDoor().toString()}", style: Heading5()),
-                    Text("${CalculateDoorCost()}", style: Heading5()),
+                    Text("${CalculateDoorCost().toString()}",
+                        style: Heading5()),
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -352,25 +345,10 @@ class _TotalBudgetState extends State<TotalBudget> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Mwteial Cost", style: Heading5()),
-                    Text("45 item", style: Heading5()),
-                    Text("40000", style: Heading5()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Labour", style: Heading5()),
-                    Text("90000", style: Heading5()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Total", style: Heading5Orange()),
-                    Text("94000", style: Heading5Orange()),
+                    Text("Colouring", style: Heading5()),
+                    Text("all", style: Heading5()),
+                    Text("${calculateColouringCost().toString()}",
+                        style: Heading5()),
                   ],
                 ),
               ]),
@@ -404,31 +382,36 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Roof Decoration", style: Heading5()),
-                    Text("40000", style: Heading5()),
+                    Text("${CalculateRoofDecoration().toString()}",
+                        style: Heading5()),
+                    Text("${CalculateRoofDecorationCost().toString()}",
+                        style: Heading5()),
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Wall", style: Heading5()),
-                    Text("90000", style: Heading5()),
+                    Text("Washroom", style: Heading5()),
+                    Text("${CalculateWashRoomDecoCost().toString()}",
+                        style: Heading5()),
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Washroom Tiles", style: Heading5()),
-                    Text("90000", style: Heading5()),
+                    Text("Kitchen", style: Heading5()),
+                    Text("${CalculateKitchenDecoCost().toString()}",
+                        style: Heading5()),
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Washroom Tiles", style: Heading5()),
-                    Text("90000", style: Heading5()),
+                    Text("Others", style: Heading5()),
+                    Text("${otherDecoCost().toString()}", style: Heading5()),
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -436,13 +419,14 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Total", style: Heading5Orange()),
-                    Text("94000", style: Heading5Orange()),
+                    Text("${totalDecoCost().toString()}",
+                        style: Heading5Orange()),
                   ],
                 ),
               ]),
             ),
 
-            // ================ Colouring Cost ====================
+            // ================ Total Cost ====================
             SizedBox(height: MediaQuery.of(context).size.height * 0.04),
             Text(
               "Total Cost",
@@ -461,7 +445,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Total Cost", style: Heading5Orange()),
-                    Text("27,810,20", style: Heading5Orange()),
+                    Text("${totalEstimatedBugdet()}", style: Heading5Orange()),
                   ],
                 ),
               ]),
@@ -602,8 +586,8 @@ class _TotalBudgetState extends State<TotalBudget> {
   //======================== Doors & Windows =======================
   //================================================================
 
-  double CalculateDoor() {
-    double numOfDoors = (widget.rawData['BedRooms'] +
+  int CalculateDoor() {
+    int numOfDoors = (widget.rawData['BedRooms'] +
         widget.rawData['BathRooms'] +
         widget.rawData['DrawingRooms'] +
         widget.rawData['LivingRooms']);
@@ -615,8 +599,8 @@ class _TotalBudgetState extends State<TotalBudget> {
     return (CalculateDoor() * costPerDoor);
   }
 
-  double CalculateWindow() {
-    double numOfDoors =
+  int CalculateWindow() {
+    int numOfDoors =
         (widget.rawData['BedRooms'] + widget.rawData['LivingRooms']);
     return (numOfDoors);
   }
@@ -632,6 +616,59 @@ class _TotalBudgetState extends State<TotalBudget> {
   }
 
   // ==================== Total cost on colouring ===============
+
+  double calculateColouringCost() {
+    double colouringCostPersqft = 22; //cost per sqft with material
+    double colouringCost = (widget.rawData["coverdArea"] + CalculateDoorCost());
+    return (colouringCost);
+  }
+
+  // ==================== Total cost on decoration ===============
+
+  int CalculateRoofDecoration() {
+    int noOfRoofs = (widget.rawData['BedRooms'] +
+        widget.rawData['DrawingRooms'] +
+        widget.rawData['LivingRooms']);
+    return noOfRoofs;
+  }
+
+  double CalculateRoofDecorationCost() {
+    double costPerRoof = 20000; //Avrg decoration cost per square feet
+    return (CalculateRoofDecoration() * costPerRoof);
+  }
+
+  double CalculateWashRoomDecoCost() {
+    double costPerWashRoom = 8000; //Avrg decoration cost per square feet
+    return (widget.rawData['BathRooms'] * costPerWashRoom);
+  }
+
+  double CalculateKitchenDecoCost() {
+    double costPerBathroom = 150000; //Avrg decoration cost per square feet
+    return (widget.rawData['Kitchens'] * costPerBathroom);
+  }
+
+  double otherDecoCost() {
+    return ((10 / 100) * totalDecoCost());
+  }
+
+  double totalDecoCost() {
+    double DecoTotal = (CalculateRoofDecorationCost() +
+        CalculateWashRoomDecoCost() +
+        CalculateKitchenDecoCost());
+    return DecoTotal;
+  }
+
+  double totalEstimatedBugdet() {
+    double totalBudget = foundationTotal() +
+        calculateSteelCost() +
+        calculateFloorCost() +
+        CalculateUtilitiesCost() +
+        totalCostWD() +
+        calculateColouringCost() +
+        totalDecoCost();
+
+    return totalBudget;
+  }
 }
 
 //  totalArea: 1.0
