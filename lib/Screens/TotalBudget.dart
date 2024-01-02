@@ -81,7 +81,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Sand", style: Heading5()),
-                      Text("${calculateSand().toString()} tons",
+                      Text("${calculateSand().toString()} cubic ft per sqft",
                           style: Heading5()),
                       Text("${calculateSandCost().toString()}",
                           style: Heading5()),
@@ -474,55 +474,55 @@ class _TotalBudgetState extends State<TotalBudget> {
 
 // ============== Calculate Total Briks =================
   double calculateBriks() {
-    double BriksPerSqft = 8; // how many briks use in 1sq.ft area
+    double BriksPerSqft = 6.55; // how many briks use in 1sq.ft area
     return (widget.rawData["coverdArea"] * BriksPerSqft);
   }
 
 // ============== Calculate Total Briks Cost =================
   double calculateBriksCost() {
-    double costPerBrik = 10; // cost of one briks
+    double costPerBrik = 13; // cost of one briks
     return (calculateBriks() * costPerBrik);
   }
 
   // ============== Calculate Total cement bag =================
   double calculateCement() {
-    double cementPerSqft = 0.4; // how many cement use in 1sq.ft area
+    double cementPerSqft = 0.5; // how many cement use in 1sq.ft area
     return (widget.rawData["coverdArea"] * cementPerSqft);
   }
 
 // ============== Calculate Total cost of cement  =================
   double calculateCementCost() {
-    double cementCostPerBag = 10; // cost of one bag cement
+    double cementCostPerBag = 1095; // cost of one bag cement
     return (calculateCement() * cementCostPerBag);
   }
 
   // ============== Calculate Total sand in tons  =================
   double calculateSand() {
-    double sandPerSqft = 0.816; // how many sand use in 1sq.ft area in tons
+    double sandPerSqft = 1.8; // how many sand use in 1sq.ft area in tons
     return (widget.rawData["coverdArea"] * sandPerSqft);
   }
 
 // ============== Calculate Total sand cost =================
   double calculateSandCost() {
-    double sandCostPerTon = 10; // cost of  sand in tons
+    double sandCostPerTon = 100; // cost of  sand in tons
     return (calculateSand() * sandCostPerTon);
   }
 
   // ============== Calculate Total Crush in tons  =================
   double calculateCrush() {
-    double CrushPerSqft = 0.816; // how many Crush use in 1sq.ft area in tons
+    double CrushPerSqft = 1.5; // how many Crush use in 1sq.ft area in tons
     return (widget.rawData["coverdArea"] * CrushPerSqft);
   }
 
   // ============== Calculate Total Crush cost =================
   double calculateCrushCost() {
-    double crushCostPerTon = 10; // cost of  Crush in tons
+    double crushCostPerTon = 200; // cost of  Crush in tons
     return (calculateCrush() * crushCostPerTon);
   }
 
   // ============== Calculate Total Labour cost =================
   double calculateLabourCost() {
-    double labourCostPersqft = 10; // cost of one Crush in tons
+    double labourCostPersqft = 250; // cost of one Crush in tons
     return (widget.rawData["coverdArea"] * labourCostPersqft);
   }
 
@@ -543,7 +543,7 @@ class _TotalBudgetState extends State<TotalBudget> {
 
   // ============== Calculate Total steel in tons  =================
   double calculateSteel() {
-    double steelPerSqft = 4; // how many steel use in 1sq.ft area in tons
+    double steelPerSqft = 3.5; // how many steel use in 1sq.ft area in tons
     return (widget.rawData["coverdArea"] * steelPerSqft);
   }
 
@@ -564,7 +564,7 @@ class _TotalBudgetState extends State<TotalBudget> {
 
   // ============== Calculate Total floor Area cost =================
   double calculateFloorCost() {
-    double labourCostPersqft = 40; // labour cost per sqft area
+    double labourCostPersqft = 350; // labour cost per sqft area
     return (floorArea() * labourCostPersqft);
   }
 
@@ -596,7 +596,7 @@ class _TotalBudgetState extends State<TotalBudget> {
   }
 
   double CalculateDoorCost() {
-    double costPerDoor = 8000; //Avg cost per Door
+    double costPerDoor = 9000; //Avg cost per Door
     return (CalculateDoor() * costPerDoor);
   }
 
@@ -607,7 +607,7 @@ class _TotalBudgetState extends State<TotalBudget> {
   }
 
   double CalculateWindowCost() {
-    double costPerWindow = 200; //Avg cost per Window
+    double costPerWindow = 1500; //Avg cost per Window
     return (CalculateWindow() * costPerWindow);
   }
 
@@ -634,17 +634,17 @@ class _TotalBudgetState extends State<TotalBudget> {
   }
 
   double CalculateRoofDecorationCost() {
-    double costPerRoof = 20000; //Avrg decoration cost per square feet
+    double costPerRoof = 250; //Avrg decoration cost per square feet
     return (CalculateRoofDecoration() * costPerRoof);
   }
 
   double CalculateWashRoomDecoCost() {
-    double costPerWashRoom = 8000; //Avrg decoration cost per square feet
+    double costPerWashRoom = 300; //Avrg decoration cost per square feet
     return (widget.rawData['BathRooms'] * costPerWashRoom);
   }
 
   double CalculateKitchenDecoCost() {
-    double costPerBathroom = 150000; //Avrg decoration cost per square feet
+    double costPerBathroom = 2500; //Avrg decoration cost per square feet
     return (widget.rawData['Kitchens'] * costPerBathroom);
   }
 
