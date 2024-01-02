@@ -445,7 +445,8 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Total Cost", style: Heading5Orange()),
-                    Text("${totalEstimatedBugdet()}", style: Heading5Orange()),
+                    Text("${totalEstimatedBugdet().toStringAsFixed(2)}",
+                        style: Heading5Orange()),
                   ],
                 ),
               ]),
@@ -572,8 +573,8 @@ class _TotalBudgetState extends State<TotalBudget> {
   //================================================================
 
   double CalculateUtilitiesCost() {
-    double plumbingcostperfeet = 50;
-    double elictercitycost = (widget.rawData['BedRooms'] * 7 +
+    int plumbingcostperfeet = 50;
+    int elictercitycost = (widget.rawData['BedRooms'] * 7 +
         widget.rawData['LivingRooms'] * 9 +
         widget.rawData['BathRooms'] * 3 +
         widget.rawData['DrawingRooms'] * 9);

@@ -1,4 +1,5 @@
 import 'package:constructoncostestimator/Screens/Home.dart';
+import 'package:constructoncostestimator/Screens/SplashScreen.dart';
 
 // import 'package:constructoncostestimator/Screens/SplashScreen.dart';
 // import 'package:constructoncostestimator/Screens/test.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       builder: EasyLoading.init(),
-      home: Home(),
+      home: Splashscreen(),
     );
   }
 }

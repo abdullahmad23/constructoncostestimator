@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 Heading1() {
   return TextStyle(
     fontFamily: GoogleFonts.inter().fontFamily,
-    fontSize: 20.0,
+    fontSize: 24.0,
     fontWeight: FontWeight.w600,
     color: Color.fromARGB(255, 228, 161, 7),
   );
@@ -34,5 +34,14 @@ Heading5Orange() {
     fontSize: 12.0,
     fontWeight: FontWeight.w600,
     color: Color.fromARGB(255, 228, 161, 7),
+  );
+}
+
+pStyle() {
+  return TextStyle(
+    fontFamily: GoogleFonts.inter().fontFamily,
+    fontSize: 12.0,
+    fontWeight: FontWeight.w400,
+    color: Colors.white,
   );
 }

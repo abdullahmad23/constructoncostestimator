@@ -38,11 +38,18 @@ class _HomeState extends State<Home> {
         child: Form(
           key: _formKey,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: MediaQuery.of(context).size.height * 0.04),
               Text(
-                "Plot Area ",
+                "Plot Area",
                 style: Heading1(),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+              Container(
+                width: 50.0,
+                height: 2.0,
+                color: Colors.white,
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.04),
               InputFields(
@@ -121,8 +128,14 @@ class _InputScreen1State extends State<InputScreen1> {
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height * 0.04),
                 Text(
-                  "Rooms Detail",
+                  "Room Details",
                   style: Heading1(),
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                Container(
+                  width: 80.0,
+                  height: 2.0,
+                  color: Colors.white,
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.04),
                 InputFields(
