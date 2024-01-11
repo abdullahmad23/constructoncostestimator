@@ -20,12 +20,12 @@ class _TotalBudgetState extends State<TotalBudget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff2a4151),
+      backgroundColor: const Color(0xff2a4151),
       body: SingleChildScrollView(
         child: Container(
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-            SizedBox(width: double.infinity),
+            const SizedBox(width: double.infinity),
             SizedBox(height: MediaQuery.of(context).size.height * 0.04),
             Text(
               "Total Estimated Cost",
@@ -41,9 +41,9 @@ class _TotalBudgetState extends State<TotalBudget> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color(0xff192730),
+                color: const Color(0xff192730),
               ),
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(
                 children: [
@@ -60,9 +60,8 @@ class _TotalBudgetState extends State<TotalBudget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Briks", style: Heading5()),
-                      Text("${calculateBriks().toString()}", style: Heading5()),
-                      Text("${calculateBriksCost().toString()}",
-                          style: Heading5()),
+                      Text(calculateBriks().toString(), style: Heading5()),
+                      Text(calculateBriksCost().toString(), style: Heading5()),
                     ],
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -70,10 +69,8 @@ class _TotalBudgetState extends State<TotalBudget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Cement", style: Heading5()),
-                      Text("${calculateCement().toString()}",
-                          style: Heading5()),
-                      Text("${calculateCementCost().toString()}",
-                          style: Heading5()),
+                      Text(calculateCement().toString(), style: Heading5()),
+                      Text(calculateCementCost().toString(), style: Heading5()),
                     ],
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -83,8 +80,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                       Text("Sand", style: Heading5()),
                       Text("${calculateSand().toString()} cubic ft per sqft",
                           style: Heading5()),
-                      Text("${calculateSandCost().toString()}",
-                          style: Heading5()),
+                      Text(calculateSandCost().toString(), style: Heading5()),
                     ],
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -94,8 +90,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                       Text("Crush", style: Heading5()),
                       Text("${calculateCrush().toString()} tons",
                           style: Heading5()),
-                      Text("${calculateCrushCost().toString()}",
-                          style: Heading5()),
+                      Text(calculateCrushCost().toString(), style: Heading5()),
                     ],
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -103,8 +98,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Labour", style: Heading5()),
-                      Text("${calculateLabourCost().toString()}",
-                          style: Heading5()),
+                      Text(calculateLabourCost().toString(), style: Heading5()),
                     ],
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -112,7 +106,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Total ", style: Heading5Orange()),
-                      Text("${foundationTotal().toStringAsFixed(2)}",
+                      Text(foundationTotal().toStringAsFixed(2),
                           style: Heading5Orange()),
                     ],
                   ),
@@ -130,9 +124,9 @@ class _TotalBudgetState extends State<TotalBudget> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color(0xff192730),
+                color: const Color(0xff192730),
               ),
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(
                 children: [
@@ -151,8 +145,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                       Text("Steel", style: Heading5()),
                       Text("${calculateSteel().toString()} ton",
                           style: Heading5()),
-                      Text("${calculateSteelCost().toString()}",
-                          style: Heading5()),
+                      Text(calculateSteelCost().toString(), style: Heading5()),
                     ],
                   ),
                 ],
@@ -168,9 +161,9 @@ class _TotalBudgetState extends State<TotalBudget> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color(0xff192730),
+                color: const Color(0xff192730),
               ),
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(children: [
                 Row(
@@ -187,8 +180,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                   children: [
                     Text("Material & labour", style: Heading5()),
                     Text("${floorArea().toString()} Area", style: Heading5()),
-                    Text("${calculateFloorCost().toString()}",
-                        style: Heading5()),
+                    Text(calculateFloorCost().toString(), style: Heading5()),
                   ],
                 ),
               ]),
@@ -203,9 +195,9 @@ class _TotalBudgetState extends State<TotalBudget> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color(0xff192730),
+                color: const Color(0xff192730),
               ),
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(children: [
                 Row(
@@ -216,13 +208,79 @@ class _TotalBudgetState extends State<TotalBudget> {
                     Text("Cost", style: Heading5Orange()),
                   ],
                 ),
+                // SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     Text("Utilities", style: Heading5()),
+                //     Text("30 items", style: Heading5()),
+                //     Text(CalculateUtilitiesCost().toString(),
+                //         style: Heading5()),
+                //   ],
+                // ),
+                //===================== plumbing =======================
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Utilities", style: Heading5()),
-                    Text("30 items", style: Heading5()),
-                    Text("${CalculateUtilitiesCost().toString()}",
+                    Text("Plumning", style: Heading5()),
+                    Text("All", style: Heading5()),
+                    Text(CalculateUtilitiesCost().toString(),
+                        style: Heading5()),
+                  ],
+                ),
+                //===================== Glass =======================
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Glass", style: Heading5()),
+                    Text("7", style: Heading5()),
+                    Text(CalculateUtilitiesCost().toString(),
+                        style: Heading5()),
+                  ],
+                ),
+                //===================== wiring =======================
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Wiring", style: Heading5()),
+                    Text("All", style: Heading5()),
+                    Text(CalculateUtilitiesCost().toString(),
+                        style: Heading5()),
+                  ],
+                ),
+                //===================== Bulb =======================
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Bulb", style: Heading5()),
+                    Text("25", style: Heading5()),
+                    Text(CalculateUtilitiesCost().toString(),
+                        style: Heading5()),
+                  ],
+                ),
+                //===================== electric board=======================
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("board", style: Heading5()),
+                    Text("18", style: Heading5()),
+                    Text(CalculateUtilitiesCost().toString(),
+                        style: Heading5()),
+                  ],
+                ),
+                //===================== water pipe=======================
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(" pipe", style: Heading5()),
+                    Text("20", style: Heading5()),
+                    Text(CalculateUtilitiesCost().toString(),
                         style: Heading5()),
                   ],
                 ),
@@ -273,9 +331,9 @@ class _TotalBudgetState extends State<TotalBudget> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color(0xff192730),
+                color: const Color(0xff192730),
               ),
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(children: [
                 Row(
@@ -291,9 +349,8 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Windows", style: Heading5()),
-                    Text("${CalculateWindow().toString()}", style: Heading5()),
-                    Text("${CalculateWindowCost().toString()}",
-                        style: Heading5()),
+                    Text(CalculateWindow().toString(), style: Heading5()),
+                    Text(CalculateWindowCost().toString(), style: Heading5()),
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -301,9 +358,8 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Doors", style: Heading5()),
-                    Text("${CalculateDoor().toString()}", style: Heading5()),
-                    Text("${CalculateDoorCost().toString()}",
-                        style: Heading5()),
+                    Text(CalculateDoor().toString(), style: Heading5()),
+                    Text(CalculateDoorCost().toString(), style: Heading5()),
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -311,8 +367,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Total", style: Heading5Orange()),
-                    Text("${totalCostWD().toString()}",
-                        style: Heading5Orange()),
+                    Text(totalCostWD().toString(), style: Heading5Orange()),
                   ],
                 ),
               ]),
@@ -328,9 +383,9 @@ class _TotalBudgetState extends State<TotalBudget> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color(0xff192730),
+                color: const Color(0xff192730),
               ),
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(children: [
                 Row(
@@ -347,7 +402,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                   children: [
                     Text("Colouring", style: Heading5()),
                     Text("all", style: Heading5()),
-                    Text("${calculateColouringCost().toString()}",
+                    Text(calculateColouringCost().toString(),
                         style: Heading5()),
                   ],
                 ),
@@ -364,9 +419,9 @@ class _TotalBudgetState extends State<TotalBudget> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color(0xff192730),
+                color: const Color(0xff192730),
               ),
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(children: [
                 Row(
@@ -382,9 +437,9 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Roof Decoration", style: Heading5()),
-                    Text("${CalculateRoofDecoration().toString()}",
+                    Text(CalculateRoofDecoration().toString(),
                         style: Heading5()),
-                    Text("${CalculateRoofDecorationCost().toString()}",
+                    Text(CalculateRoofDecorationCost().toString(),
                         style: Heading5()),
                   ],
                 ),
@@ -393,7 +448,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Washroom", style: Heading5()),
-                    Text("${CalculateWashRoomDecoCost().toString()}",
+                    Text(CalculateWashRoomDecoCost().toString(),
                         style: Heading5()),
                   ],
                 ),
@@ -402,7 +457,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Kitchen", style: Heading5()),
-                    Text("${CalculateKitchenDecoCost().toString()}",
+                    Text(CalculateKitchenDecoCost().toString(),
                         style: Heading5()),
                   ],
                 ),
@@ -411,7 +466,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Others", style: Heading5()),
-                    Text("${otherDecoCost().toString()}", style: Heading5()),
+                    Text(otherDecoCost().toString(), style: Heading5()),
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -419,8 +474,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Total", style: Heading5Orange()),
-                    Text("${totalDecoCost().toString()}",
-                        style: Heading5Orange()),
+                    Text(totalDecoCost().toString(), style: Heading5Orange()),
                   ],
                 ),
               ]),
@@ -436,16 +490,16 @@ class _TotalBudgetState extends State<TotalBudget> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color(0xff192730),
+                color: const Color(0xff192730),
               ),
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Total Cost", style: Heading5Orange()),
-                    Text("${totalEstimatedBugdet().toStringAsFixed(2)}",
+                    Text(totalEstimatedBugdet().toStringAsFixed(2),
                         style: Heading5Orange()),
                   ],
                 ),
