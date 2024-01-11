@@ -239,7 +239,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                         style: Heading5()),
                   ],
                 ),
-                //==============  glass cost ==================
+                //==============  Glass cost ==================
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
