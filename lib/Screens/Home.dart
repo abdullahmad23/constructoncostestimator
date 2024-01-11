@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:constructoncostestimator/Components/Button.dart';
 import 'package:constructoncostestimator/Components/TextField.dart';
 import 'package:constructoncostestimator/Components/TextStyels.dart';
@@ -58,6 +60,8 @@ class _HomeState extends State<Home> {
                 validation: (value) {
                   if (value == null || value.isEmpty) {
                     return "please enter some value";
+                  } else if (int.parse(value) <= 700) {
+                    return "Minimum 700sq ft ";
                   }
                   return null;
                 },
@@ -67,7 +71,14 @@ class _HomeState extends State<Home> {
                 fieldText: "Enter Coverd Size in Sq.ft",
                 validation: (value) {
                   if (value == null || value.isEmpty) {
-                    return "please enter some value";
+                    return "please enter some sq.ft";
+                  } else {
+                    int total = int.parse(_totalSizeController.text);
+                    int coverdArea = int.parse(value!);
+                    if (coverdArea > total) {
+                      print('object');
+                      return "invalid Area";
+                    }
                   }
                   return null;
                 },

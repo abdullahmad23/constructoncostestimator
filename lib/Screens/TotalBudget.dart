@@ -543,7 +543,7 @@ class _TotalBudgetState extends State<TotalBudget> {
 
   // ============== Calculate Total steel in tons  =================
   double calculateSteel() {
-    double steelPerSqft = 3.5; // how many steel use in 1sq.ft area in tons
+    double steelPerSqft = 0.00440; // how many steel use in 1sq.ft area in tons
     return (widget.rawData["coverdArea"] * steelPerSqft);
   }
 
