@@ -278,7 +278,7 @@ class _TotalBudgetState extends State<TotalBudget> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(" pipes", style: Heading5()),
+                    Text(" pipe", style: Heading5()),
                     Text("20", style: Heading5()),
                     Text(CalculateUtilitiesCost().toString(),
                         style: Heading5()),
