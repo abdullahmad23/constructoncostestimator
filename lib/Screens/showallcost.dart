@@ -4,8 +4,8 @@ import 'package:constructoncostestimator/Screens/TotalBudget.dart';
 import 'package:flutter/material.dart';
 
 class ShowAllData extends StatefulWidget {
-  Map<String, dynamic> rawData = {};
-  ShowAllData({super.key, required rawData});
+  Map<String, dynamic> rawData;
+  ShowAllData({super.key, required this.rawData});
 
   @override
   State<ShowAllData> createState() => _ShowAllDataState();
@@ -26,8 +26,12 @@ class _ShowAllDataState extends State<ShowAllData> {
             ),
             InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => TotalBudget()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => TotalBudget(
+                              rawData: widget.rawData,
+                            )));
               },
               child: Container(
                   height: 120,
