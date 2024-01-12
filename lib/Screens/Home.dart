@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:constructoncostestimator/Components/Button.dart';
 import 'package:constructoncostestimator/Components/TextField.dart';
 import 'package:constructoncostestimator/Components/TextStyels.dart';
@@ -17,16 +15,16 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  TextEditingController _totalSizeController = TextEditingController();
-  TextEditingController _coverdSizeController = TextEditingController();
+  final TextEditingController _totalSizeController = TextEditingController();
+  final TextEditingController _coverdSizeController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
   OnButtonPressed() {
     if (_formKey.currentState!.validate()) {
       data['totalArea'] = double.parse(_totalSizeController.text);
       data['coverdArea'] = double.parse(_coverdSizeController.text);
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => InputScreen1()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const InputScreen1()));
     } else {
       EasyLoading.showToast("field Empty");
     }
@@ -35,7 +33,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff2a4151),
+      backgroundColor: const Color(0xff2a4151),
       body: SafeArea(
         child: Form(
           key: _formKey,
@@ -74,7 +72,7 @@ class _HomeState extends State<Home> {
                     return "please enter some sq.ft";
                   } else {
                     int total = int.parse(_totalSizeController.text);
-                    int coverdArea = int.parse(value!);
+                    int coverdArea = int.parse(value);
                     if (coverdArea > total) {
                       print('object');
                       return "invalid Area";
@@ -102,11 +100,11 @@ class InputScreen1 extends StatefulWidget {
 
 class _InputScreen1State extends State<InputScreen1> {
   // ==============  Rooms ========================
-  TextEditingController _bedRoomsController = TextEditingController();
-  TextEditingController _bathRoomsController = TextEditingController();
-  TextEditingController _kitchensController = TextEditingController();
-  TextEditingController _livingRoomsController = TextEditingController();
-  TextEditingController _drawingRoomsController = TextEditingController();
+  final TextEditingController _bedRoomsController = TextEditingController();
+  final TextEditingController _bathRoomsController = TextEditingController();
+  final TextEditingController _kitchensController = TextEditingController();
+  final TextEditingController _livingRoomsController = TextEditingController();
+  final TextEditingController _drawingRoomsController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
   OnButtonPressed() {
@@ -130,7 +128,7 @@ class _InputScreen1State extends State<InputScreen1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff2a4151),
+      backgroundColor: const Color(0xff2a4151),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Form(
