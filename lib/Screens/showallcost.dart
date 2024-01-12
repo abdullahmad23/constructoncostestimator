@@ -24,27 +24,155 @@ class _ShowAllDataState extends State<ShowAllData> {
             const SizedBox(
               height: 80,
             ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => TotalBudget(
-                              rawData: widget.rawData,
-                            )));
-              },
-              child: Container(
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: const Color(0xff192730),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Center(
-                      child: Text(
-                    'Total Cost',
-                    style: Heading5(),
-                  ))),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TotalBudget(
+                                  rawData: widget.rawData,
+                                )));
+                  },
+                  child: Container(
+                      height: 120,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: const Color(0xff192730),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Center(
+                          child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              color: const Color(0xff2a4151),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Container(
+                              height: 20,
+                              width: 20,
+                              decoration: const BoxDecoration(
+                                  // image: DecorationImage(
+                                  //   // image: AssetImage('images/costImg.png'),
+
+                                  // ),
+
+                                  ),
+                              child: const Icon(
+                                Icons.gif_box_rounded,
+                                color: Color.fromARGB(255, 196, 199, 13),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            'Total Cost',
+                            style: Heading5(),
+                          ),
+                        ],
+                      ))),
+                ),
+                Container(
+                    height: 120,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff192730),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                        child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff2a4151),
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          child: Container(
+                            height: 20,
+                            width: 20,
+                            decoration: const BoxDecoration(
+                                // image: DecorationImage(
+                                //   // image: AssetImage('images/costImg.png'),
+
+                                // ),
+
+                                ),
+                            child: const Icon(
+                              Icons.gif_box_rounded,
+                              color: Color.fromARGB(255, 196, 199, 13),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Text(
+                          'Total Cost',
+                          style: Heading5(),
+                        ),
+                      ],
+                    ))),
+                Container(
+                    height: 120,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff192730),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                        child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff2a4151),
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          child: Container(
+                            height: 20,
+                            width: 20,
+                            decoration: const BoxDecoration(
+                                // image: DecorationImage(
+                                //   // image: AssetImage('images/costImg.png'),
+
+                                // ),
+
+                                ),
+                            child: const Icon(
+                              Icons.gif_box_rounded,
+                              color: Color.fromARGB(255, 196, 199, 13),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Text(
+                          'Total Cost',
+                          style: Heading5(),
+                        ),
+                      ],
+                    ))),
+              ],
             ),
           ],
         ),
