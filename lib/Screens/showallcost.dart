@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 Map<String, dynamic> data = {};
 
 class ShowAllData extends StatefulWidget {
-  const ShowAllData({super.key});
+  Map<String, dynamic> rawData = {};
+  ShowAllData({super.key, required rawData});
 
   @override
   State<ShowAllData> createState() => _ShowAllDataState();

@@ -2,6 +2,7 @@ import 'package:constructoncostestimator/Components/Button.dart';
 import 'package:constructoncostestimator/Components/TextField.dart';
 import 'package:constructoncostestimator/Components/TextStyels.dart';
 import 'package:constructoncostestimator/Screens/TotalBudget.dart';
+import 'package:constructoncostestimator/Screens/showallcost.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
@@ -117,7 +118,7 @@ class _InputScreen1State extends State<InputScreen1> {
       Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => TotalBudget(
+              builder: (context) => ShowAllData(
                     rawData: data,
                   )));
     } else {
