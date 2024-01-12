@@ -3,8 +3,6 @@ import 'package:constructoncostestimator/Screens/Home.dart';
 import 'package:constructoncostestimator/Screens/TotalBudget.dart';
 import 'package:flutter/material.dart';
 
-Map<String, dynamic> data = {};
-
 class ShowAllData extends StatefulWidget {
   Map<String, dynamic> rawData = {};
   ShowAllData({super.key, required rawData});
