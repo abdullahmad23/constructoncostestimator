@@ -1,4 +1,5 @@
 import 'package:constructoncostestimator/Components/TextStyels.dart';
+import 'package:constructoncostestimator/Costs/Foundation.dart';
 import 'package:constructoncostestimator/Screens/Home.dart';
 import 'package:constructoncostestimator/Screens/TotalBudget.dart';
 import 'package:flutter/material.dart';
@@ -37,14 +38,14 @@ class _ShowAllDataState extends State<ShowAllData> {
                                 )));
                   },
                   child: Container(
-                      height: 120,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        color: const Color(0xff192730),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Center(
-                          child: Column(
+                    height: 120,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff192730),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                      child: Column(
                         children: [
                           const SizedBox(
                             height: 10,
@@ -80,6 +81,57 @@ class _ShowAllDataState extends State<ShowAllData> {
                             style: Heading5(),
                           ),
                         ],
+                      ),
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {},
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) => Foundation(
+                  //               rawData: widget.rawData,
+                  //             )));
+                  // },
+                  child: Container(
+                      height: 120,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: const Color(0xff192730),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Center(
+                          child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              color: const Color(0xff2a4151),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Container(
+                              height: 20,
+                              width: 20,
+                              decoration: const BoxDecoration(),
+                              child: const Icon(
+                                Icons.gif_box_rounded,
+                                color: Color.fromARGB(255, 196, 199, 13),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            'Foundation & \n Structure',
+                            style: Heading5(),
+                          ),
+                        ],
                       ))),
                 ),
                 Container(
@@ -105,13 +157,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           child: Container(
                             height: 20,
                             width: 20,
-                            decoration: const BoxDecoration(
-                                // image: DecorationImage(
-                                //   // image: AssetImage('images/costImg.png'),
-
-                                // ),
-
-                                ),
+                            decoration: const BoxDecoration(),
                             child: const Icon(
                               Icons.gif_box_rounded,
                               color: Color.fromARGB(255, 196, 199, 13),
@@ -122,52 +168,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           height: 15,
                         ),
                         Text(
-                          'Total Cost',
-                          style: Heading5(),
-                        ),
-                      ],
-                    ))),
-                Container(
-                    height: 120,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      color: const Color(0xff192730),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Center(
-                        child: Column(
-                      children: [
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            color: const Color(0xff2a4151),
-                            borderRadius: BorderRadius.circular(100),
-                          ),
-                          child: Container(
-                            height: 20,
-                            width: 20,
-                            decoration: const BoxDecoration(
-                                // image: DecorationImage(
-                                //   // image: AssetImage('images/costImg.png'),
-
-                                // ),
-
-                                ),
-                            child: const Icon(
-                              Icons.gif_box_rounded,
-                              color: Color.fromARGB(255, 196, 199, 13),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          'Total Cost',
+                          'Steel Cost',
                           style: Heading5(),
                         ),
                       ],
@@ -184,21 +185,4 @@ class _ShowAllDataState extends State<ShowAllData> {
 // import 'dart:html';
 
 // import 'package:constructoncostestimator/Components/TextStyels.dart';
-// import 'package:flutter/material.dart';
-
-// class ShowAllData extends StatefulWidget {
-//   const ShowAllData({super.key, required Map<String, dynamic> rawData});
-
-//   @override
-//   State<ShowAllData> createState() => _ShowAllDataState();
-// }
-
-// class _ShowAllDataState extends State<ShowAllData> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//     
-//     );
-//   }
-// }
 
