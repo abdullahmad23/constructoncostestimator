@@ -12,6 +12,16 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: method,
+      style: ElevatedButton.styleFrom(
+          minimumSize: Size(MediaQuery.of(context).size.width * 0.5,
+              MediaQuery.of(context).size.width * 0.13),
+          backgroundColor: const Color.fromARGB(255, 228, 161, 7),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+            side: const BorderSide(
+              color: Colors.white,
+            ),
+          )),
       child: Text(
         text,
         style: TextStyle(
@@ -20,16 +30,6 @@ class Button extends StatelessWidget {
             fontSize: 16,
             fontWeight: FontWeight.w600),
       ),
-      style: ElevatedButton.styleFrom(
-          minimumSize: Size(MediaQuery.of(context).size.width * 0.5,
-              MediaQuery.of(context).size.width * 0.13),
-          backgroundColor: Color.fromARGB(255, 228, 161, 7),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-            side: BorderSide(
-              color: Colors.white,
-            ),
-          )),
     );
   }
 }
