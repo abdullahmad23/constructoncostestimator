@@ -233,9 +233,9 @@ class _TotalBudgetState extends State<TotalBudget> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Electricity", style: Heading5()),
+                    Text("Electrical", style: Heading5()),
                     Text(" ", style: Heading5()),
-                    Text("${CalculateElectricityCost().toString()}",
+                    Text("${CalculateElectricityCost().toStringAsFixed(2)}",
                         style: Heading5()),
                   ],
                 ),
@@ -247,6 +247,17 @@ class _TotalBudgetState extends State<TotalBudget> {
                     Text("Glass", style: Heading5()),
                     Text("", style: Heading5()),
                     Text("${CalculateGlassCost().toString()}",
+                        style: Heading5()),
+                  ],
+                ),
+                //==============  total cost ==================
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Total", style: Heading5()),
+                    Text("", style: Heading5()),
+                    Text("${CalculateUtilitiesCost().toStringAsFixed(2)}",
                         style: Heading5()),
                   ],
                 ),
@@ -603,23 +614,21 @@ class _TotalBudgetState extends State<TotalBudget> {
   }
 
   double CalculateElectricityCost() {
-    double elictercitycost = (widget.rawData['BedRooms'] * 7 +
-        widget.rawData['LivingRooms'] * 9 +
-        widget.rawData['BathRooms'] * 3 +
-        widget.rawData['DrawingRooms'] * 9);
+    double elictercitycost = totalContructionCost() * (6.8 / 100);
     return (elictercitycost);
   }
 
   double CalculateGlassCost() {
     double glassCost =
-        (widget.rawData['BedRooms'] + widget.rawData['LivingRooms']) / 2.0;
+        (widget.rawData['BedRooms'] + widget.rawData['LivingRooms'] + 0.5);
     int oneWindowGlass = 24 * 155;
     return (glassCost * oneWindowGlass);
   }
 
   double CalculateUtilitiesCost() {
-    double totalUtilitiesCost =
-        CalculateElectricityCost() + CalculatePlumbingCost();
+    double totalUtilitiesCost = CalculateElectricityCost() +
+        CalculatePlumbingCost() +
+        CalculateGlassCost();
     return (totalUtilitiesCost);
   }
 
