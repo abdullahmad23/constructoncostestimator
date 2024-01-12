@@ -25,7 +25,10 @@ class _ShowAllDataState extends State<ShowAllData> {
               height: 80,
             ),
             InkWell(
-              onTap: () => const TotalBudget(),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => TotalBudget()));
+              },
               child: Container(
                   height: 120,
                   width: 120,
