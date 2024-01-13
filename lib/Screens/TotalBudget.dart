@@ -2,8 +2,8 @@ import 'package:constructoncostestimator/Components/TextStyels.dart';
 import 'package:flutter/material.dart';
 
 class TotalBudget extends StatefulWidget {
-  final rawData;
-  const TotalBudget({super.key, this.rawData});
+  final Map rawData;
+  const TotalBudget({super.key, required this.rawData});
 
   @override
   State<TotalBudget> createState() => _TotalBudgetState();
