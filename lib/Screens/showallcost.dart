@@ -67,10 +67,8 @@ class _ShowAllDataState extends State<ShowAllData> {
                                   // ),
 
                                   ),
-                              child: const Icon(
-                                Icons.gif_box_rounded,
-                                color: Color.fromARGB(255, 196, 199, 13),
-                              ),
+                              // child:
+                              child: Image.asset('images/brick.gif'),
                             ),
                           ),
                           const SizedBox(
@@ -185,4 +183,3 @@ class _ShowAllDataState extends State<ShowAllData> {
 // import 'dart:html';
 
 // import 'package:constructoncostestimator/Components/TextStyels.dart';
-
