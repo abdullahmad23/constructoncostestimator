@@ -60,15 +60,8 @@ class _ShowAllDataState extends State<ShowAllData> {
                             child: Container(
                               height: 20,
                               width: 20,
-                              decoration: const BoxDecoration(
-                                  // image: DecorationImage(
-                                  //   // image: AssetImage('images/costImg.png'),
-
-                                  // ),
-
-                                  ),
-                              // child:
-                              child: Image.asset('images/brick.gif'),
+                              decoration: const BoxDecoration(),
+                              child: Image.asset("images/home.gif"),
                             ),
                           ),
                           const SizedBox(
@@ -116,10 +109,11 @@ class _ShowAllDataState extends State<ShowAllData> {
                               height: 20,
                               width: 20,
                               decoration: const BoxDecoration(),
-                              child: const Icon(
-                                Icons.gif_box_rounded,
-                                color: Color.fromARGB(255, 196, 199, 13),
-                              ),
+                              // child: const Icon(
+                              //   Icons.gif_box_rounded,
+                              //   color: Color.fromARGB(255, 196, 199, 13),
+                              // ),
+                              child: Image.asset("images/brick.gif"),
                             ),
                           ),
                           const SizedBox(
@@ -183,3 +177,4 @@ class _ShowAllDataState extends State<ShowAllData> {
 // import 'dart:html';
 
 // import 'package:constructoncostestimator/Components/TextStyels.dart';
+
