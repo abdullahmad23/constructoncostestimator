@@ -14,47 +14,51 @@ class _FoundationState extends State<Steel> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff2a4151),
       body: SafeArea(
-          child: Column(
-        children: [
-          // ================ Steel Cost ====================
-          SizedBox(height: MediaQuery.of(context).size.height * 0.08),
-          Text(
-            "Steel Cost",
-            style: Heading2(),
-          ),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: const Color(0xff192730),
+          child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          children: [
+            // ================ Steel Cost ====================
+            SizedBox(height: MediaQuery.of(context).size.height * 0.08),
+            Text(
+              "Steel Cost",
+              style: Heading2(),
             ),
-            padding: const EdgeInsets.all(10.0),
-            width: MediaQuery.of(context).size.width * 0.95,
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Item", style: Heading5Orange()),
-                    Text("Quantity", style: Heading5Orange()),
-                    Text("Cost", style: Heading5Orange()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Steel", style: Heading5()),
-                    Text("${calculateSteel().toString()} ton",
-                        style: Heading5()),
-                    Text(calculateSteelCost().toString(), style: Heading5()),
-                  ],
-                ),
-              ],
+            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: const Color(0xff192730),
+              ),
+              padding: const EdgeInsets.all(10.0),
+              width: MediaQuery.of(context).size.width * 0.95,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Item", style: Heading5Orange()),
+                      Text("Quantity", style: Heading5Orange()),
+                      Text("Cost", style: Heading5Orange()),
+                    ],
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Steel", style: Heading5()),
+                      Text("${calculateSteel().toString()} ton",
+                          style: Heading5()),
+                      Text(calculateSteelCost().toString(), style: Heading5()),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       )),
     );
   }

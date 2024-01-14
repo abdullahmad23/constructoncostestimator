@@ -1,5 +1,6 @@
 import 'package:constructoncostestimator/Components/TextStyels.dart';
 import 'package:constructoncostestimator/Costs/Foundation.dart';
+import 'package:constructoncostestimator/Costs/Steel.dart';
 import 'package:constructoncostestimator/Screens/Home.dart';
 import 'package:constructoncostestimator/Screens/TotalBudget.dart';
 import 'package:flutter/material.dart';
@@ -77,14 +78,14 @@ class _ShowAllDataState extends State<ShowAllData> {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) => Foundation(
-                  //               rawData: widget.rawData,
-                  //             )));
-                  // },
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Foundation(
+                                  rawData: widget.rawData,
+                                )));
+                  },
                   child: Container(
                       height: 120,
                       width: 100,
@@ -126,6 +127,65 @@ class _ShowAllDataState extends State<ShowAllData> {
                         ],
                       ))),
                 ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Steel(
+                                  rawData: widget.rawData,
+                                )));
+                  },
+                  child: Container(
+                    height: 120,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff192730),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                      child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              color: const Color(0xff2a4151),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Container(
+                              height: 20,
+                              width: 20,
+                              decoration: const BoxDecoration(),
+                              child: const Icon(
+                                Icons.gif_box_rounded,
+                                color: Color.fromARGB(255, 196, 199, 13),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            'Steel Cost',
+                            style: Heading5(),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 35,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
                 Container(
                     height: 120,
                     width: 100,
@@ -150,17 +210,186 @@ class _ShowAllDataState extends State<ShowAllData> {
                             height: 20,
                             width: 20,
                             decoration: const BoxDecoration(),
-                            child: const Icon(
-                              Icons.gif_box_rounded,
-                              color: Color.fromARGB(255, 196, 199, 13),
-                            ),
+                            // child: const Icon(
+                            //   Icons.gif_box_rounded,
+                            //   color: Color.fromARGB(255, 196, 199, 13),
+                            // ),
+                            child: Image.asset("images/brick.gif"),
                           ),
                         ),
                         const SizedBox(
                           height: 15,
                         ),
                         Text(
-                          'Steel Cost',
+                          'Floor Cost',
+                          style: Heading5(),
+                        ),
+                      ],
+                    ))),
+                Container(
+                    height: 120,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff192730),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                        child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff2a4151),
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          child: Container(
+                            height: 20,
+                            width: 20,
+                            decoration: const BoxDecoration(),
+                            // child: const Icon(
+                            //   Icons.gif_box_rounded,
+                            //   color: Color.fromARGB(255, 196, 199, 13),
+                            // ),
+                            child: Image.asset("images/brick.gif"),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Text(
+                          'Utilities Cost',
+                          style: Heading5(),
+                        ),
+                      ],
+                    ))),
+                Container(
+                    height: 120,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff192730),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                        child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff2a4151),
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          child: Container(
+                            height: 20,
+                            width: 20,
+                            decoration: const BoxDecoration(),
+                            // child: const Icon(
+                            //   Icons.gif_box_rounded,
+                            //   color: Color.fromARGB(255, 196, 199, 13),
+                            // ),
+                            child: Image.asset("images/brick.gif"),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Text(
+                          'Windows &\n Doors Cost',
+                          style: Heading5(),
+                        ),
+                      ],
+                    ))),
+              ],
+            ),
+            const SizedBox(
+              height: 35,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                    height: 120,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff192730),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                        child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff2a4151),
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          child: Container(
+                            height: 20,
+                            width: 20,
+                            decoration: const BoxDecoration(),
+                            // child: const Icon(
+                            //   Icons.gif_box_rounded,
+                            //   color: Color.fromARGB(255, 196, 199, 13),
+                            // ),
+                            child: Image.asset("images/brick.gif"),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Text(
+                          'Windows &\n Doors Cost',
+                          style: Heading5(),
+                        ),
+                      ],
+                    ))),
+                Container(
+                    height: 120,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff192730),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                        child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff2a4151),
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          child: Container(
+                            height: 20,
+                            width: 20,
+                            decoration: const BoxDecoration(),
+                            // child: const Icon(
+                            //   Icons.gif_box_rounded,
+                            //   color: Color.fromARGB(255, 196, 199, 13),
+                            // ),
+                            child: Image.asset("images/brick.gif"),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Text(
+                          'Windows &\n Doors Cost',
                           style: Heading5(),
                         ),
                       ],

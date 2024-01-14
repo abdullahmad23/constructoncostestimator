@@ -14,6 +14,7 @@ class _FoundationState extends State<Foundation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff2a4151),
       body: SafeArea(
           child: Column(
         children: [

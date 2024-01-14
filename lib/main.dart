@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       builder: EasyLoading.init(),
-      home: Splashscreen(),
+      home: const Splashscreen(),
     );
   }
 }
