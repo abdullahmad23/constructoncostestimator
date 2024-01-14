@@ -16,91 +16,94 @@ class _FoundationState extends State<Foundation> {
     return Scaffold(
       backgroundColor: const Color(0xff2a4151),
       body: SafeArea(
-          child: Column(
-        children: [
-          // ================ Foundation & Structure Cost ====================
-          SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-          Text(
-            "Foundation & Structure",
-            style: Heading2(),
-          ),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: const Color(0xff192730),
+          child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          children: [
+            // ================ Foundation & Structure Cost ====================
+            SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+            Text(
+              "Foundation & Structure",
+              style: Heading2(),
             ),
-            padding: const EdgeInsets.all(10.0),
-            width: MediaQuery.of(context).size.width * 0.95,
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Item", style: Heading5Orange()),
-                    Text("Quantity", style: Heading5Orange()),
-                    Text("Cost", style: Heading5Orange()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Briks", style: Heading5()),
-                    Text(calculateBriks().toString(), style: Heading5()),
-                    Text(calculateBriksCost().toString(), style: Heading5()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Cement", style: Heading5()),
-                    Text(calculateCement().toString(), style: Heading5()),
-                    Text(calculateCementCost().toString(), style: Heading5()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Sand", style: Heading5()),
-                    Text("${calculateSand().toString()} cubic ft per sqft",
-                        style: Heading5()),
-                    Text(calculateSandCost().toString(), style: Heading5()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Crush", style: Heading5()),
-                    Text("${calculateCrush().toString()} tons",
-                        style: Heading5()),
-                    Text(calculateCrushCost().toString(), style: Heading5()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Labour", style: Heading5()),
-                    Text(calculateLabourCost().toString(), style: Heading5()),
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Total ", style: Heading5Orange()),
-                    Text(foundationTotal().toStringAsFixed(2),
-                        style: Heading5Orange()),
-                  ],
-                ),
-              ],
+            SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: const Color(0xff192730),
+              ),
+              padding: const EdgeInsets.all(10.0),
+              width: MediaQuery.of(context).size.width * 0.95,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Item", style: Heading5Orange()),
+                      Text("Quantity", style: Heading5Orange()),
+                      Text("Cost", style: Heading5Orange()),
+                    ],
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Briks", style: Heading5()),
+                      Text(calculateBriks().toString(), style: Heading5()),
+                      Text(calculateBriksCost().toString(), style: Heading5()),
+                    ],
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Cement", style: Heading5()),
+                      Text(calculateCement().toString(), style: Heading5()),
+                      Text(calculateCementCost().toString(), style: Heading5()),
+                    ],
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Sand", style: Heading5()),
+                      Text("${calculateSand().toString()} cubic ft per sqft",
+                          style: Heading5()),
+                      Text(calculateSandCost().toString(), style: Heading5()),
+                    ],
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Crush", style: Heading5()),
+                      Text("${calculateCrush().toString()} tons",
+                          style: Heading5()),
+                      Text(calculateCrushCost().toString(), style: Heading5()),
+                    ],
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Labour", style: Heading5()),
+                      Text(calculateLabourCost().toString(), style: Heading5()),
+                    ],
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Total ", style: Heading5Orange()),
+                      Text(foundationTotal().toStringAsFixed(2),
+                          style: Heading5Orange()),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       )),
     );
   }

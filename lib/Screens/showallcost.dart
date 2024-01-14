@@ -349,7 +349,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           height: 15,
                         ),
                         Text(
-                          'Windows &\n Doors Cost',
+                          'Colouring\n   Cost',
                           style: Heading5(),
                         ),
                       ],
@@ -389,7 +389,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           height: 15,
                         ),
                         Text(
-                          'Windows &\n Doors Cost',
+                          'Decoration\n    Cost',
                           style: Heading5(),
                         ),
                       ],
