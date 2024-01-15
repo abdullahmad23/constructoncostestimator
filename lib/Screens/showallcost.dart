@@ -47,7 +47,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                     height: 120,
                     width: 100,
                     decoration: BoxDecoration(
-                      color: const Color(0xff192730),
+                      color: Color.fromARGB(255, 245, 246, 247),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Center(
@@ -75,7 +75,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           ),
                           Text(
                             'Total Cost',
-                            style: Heading5(),
+                            // style: Heading5(),
                           ),
                         ],
                       ),
@@ -95,7 +95,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: const Color(0xff192730),
+                        color: Color.fromARGB(255, 250, 251, 252),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -119,7 +119,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                               //   Icons.gif_box_rounded,
                               //   color: Color.fromARGB(255, 196, 199, 13),
                               // ),
-                              child: Image.asset("images/brick.gif"),
+                              child:Image.asset("images/structure.gif") ,
                             ),
                           ),
                           const SizedBox(
@@ -127,7 +127,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           ),
                           Text(
                             'Foundation & \n Structure',
-                            style: Heading5(),
+                            // style: Heading5(),
                           ),
                         ],
                       ))),
@@ -145,7 +145,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                     height: 120,
                     width: 100,
                     decoration: BoxDecoration(
-                      color: const Color(0xff192730),
+                      color: Color.fromARGB(255, 250, 251, 252),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Center(
@@ -165,10 +165,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                               height: 20,
                               width: 20,
                               decoration: const BoxDecoration(),
-                              child: const Icon(
-                                Icons.gif_box_rounded,
-                                color: Color.fromARGB(255, 196, 199, 13),
-                              ),
+                                child: Image.asset("images/steel.gif"),
                             ),
                           ),
                           const SizedBox(
@@ -176,7 +173,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           ),
                           Text(
                             'Steel Cost',
-                            style: Heading5(),
+                            // style: Heading5(),
                           ),
                         ],
                       ),
@@ -204,7 +201,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: const Color(0xff192730),
+                        color: Color.fromARGB(255, 247, 248, 248),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -228,7 +225,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                               //   Icons.gif_box_rounded,
                               //   color: Color.fromARGB(255, 196, 199, 13),
                               // ),
-                              child: Image.asset("images/brick.gif"),
+                              child: Image.asset("images/floor.png"),
                             ),
                           ),
                           const SizedBox(
@@ -236,7 +233,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           ),
                           Text(
                             'Floor Cost',
-                            style: Heading5(),
+                            // style: Heading5(),
                           ),
                         ],
                       ))),
@@ -254,7 +251,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: const Color(0xff192730),
+                        color: Color.fromARGB(255, 240, 241, 241),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -267,7 +264,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                             height: 50,
                             width: 50,
                             decoration: BoxDecoration(
-                              color: const Color(0xff2a4151),
+                              color: Color.fromARGB(255, 248, 249, 250),
                               borderRadius: BorderRadius.circular(100),
                             ),
                             child: Container(
@@ -278,7 +275,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                               //   Icons.gif_box_rounded,
                               //   color: Color.fromARGB(255, 196, 199, 13),
                               // ),
-                              child: Image.asset("images/brick.gif"),
+                              child: Image.asset("images/utilities (2).gif"),
                             ),
                           ),
                           const SizedBox(
@@ -286,7 +283,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           ),
                           Text(
                             'Utilities Cost',
-                            style: Heading5(),
+                            // style: Heading5(),
                           ),
                         ],
                       ))),
@@ -304,7 +301,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: const Color(0xff192730),
+                        color: Color.fromARGB(255, 244, 244, 245),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -328,7 +325,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                               //   Icons.gif_box_rounded,
                               //   color: Color.fromARGB(255, 196, 199, 13),
                               // ),
-                              child: Image.asset("images/brick.gif"),
+                              child: Image.asset("images/door.png"),
                             ),
                           ),
                           const SizedBox(
@@ -336,7 +333,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           ),
                           Text(
                             'Windows &\n Doors Cost',
-                            style: Heading5(),
+                            // style: Heading5(),
                           ),
                         ],
                       ))),
@@ -362,7 +359,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: const Color(0xff192730),
+                        color: Color.fromARGB(255, 250, 251, 252),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -386,7 +383,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                               //   Icons.gif_box_rounded,
                               //   color: Color.fromARGB(255, 196, 199, 13),
                               // ),
-                              child: Image.asset("images/brick.gif"),
+                              child: Image.asset("images/icons8-paint-roller.gif"),
                             ),
                           ),
                           const SizedBox(
@@ -394,7 +391,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           ),
                           Text(
                             'Colouring\n   Cost',
-                            style: Heading5(),
+                            // style: Heading5(),
                           ),
                         ],
                       ))),
@@ -412,7 +409,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: const Color(0xff192730),
+                        color: Color.fromARGB(255, 251, 254, 255),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -425,7 +422,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                             height: 50,
                             width: 50,
                             decoration: BoxDecoration(
-                              color: const Color(0xff2a4151),
+                              color: Color.fromARGB(255, 243, 245, 247),
                               borderRadius: BorderRadius.circular(100),
                             ),
                             child: Container(
@@ -436,7 +433,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                               //   Icons.gif_box_rounded,
                               //   color: Color.fromARGB(255, 196, 199, 13),
                               // ),
-                              child: Image.asset("images/brick.gif"),
+                              child: Image.asset("images/icons8-warehouse.gif"),
                             ),
                           ),
                           const SizedBox(
@@ -444,7 +441,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                           ),
                           Text(
                             'Decoration\n    Cost',
-                            style: Heading5(),
+                            // style: TextStyle(c),
                           ),
                         ],
                       ))),
