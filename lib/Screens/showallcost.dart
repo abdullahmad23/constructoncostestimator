@@ -7,6 +7,7 @@ import 'package:constructoncostestimator/Costs/Utilities.dart';
 import 'package:constructoncostestimator/Costs/Windowss.dart';
 import 'package:constructoncostestimator/Costs/floor.dart';
 import 'package:constructoncostestimator/Screens/Home.dart';
+import 'package:constructoncostestimator/Screens/Print.dart';
 import 'package:constructoncostestimator/Screens/TotalBudget.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,34 @@ class ShowAllData extends StatefulWidget {
 }
 
 class _ShowAllDataState extends State<ShowAllData> {
+Map<String, dynamic> data={
+  "Bricks": { "Quantity": 100, "Cost": 100 },
+  "Cement": { "Quantity": 100, "Cost": 100 },
+  "Sand": { "Quantity": 100, "Cost": 100 },
+  "Crush": { "Quantity": 100, "Cost": 100 },
+  "Labour": { "Quantity": 100, "Cost": 100 },
+  "Steel": { "Quantity": 100, "Cost": 100 },
+  "Material&Labour": { "Quantity": 100, "Cost": 100 },
+  "Plumbing": { "Quantity": 100, "Cost": 100 },
+  "Electrical": { "Quantity": 100, "Cost": 100 },
+  "Glass": { "Quantity": 100, "Cost": 100 },
+  "UtilitiesTotal": { "Quantity": 100, "Cost": 100 },
+  "Windows": { "Quantity": 100, "Cost": 100 },
+  "Dorrs": { "Quantity": 100, "Cost": 100 },
+  "W&DTotal": { "Quantity": 100, "Cost": 100 },
+  "Colouring": { "Quantity": 100, "Cost": 100 },
+  "RoofDecoration": { "Quantity": 100, "Cost": 100 },
+  "Washroom": { "Quantity": 100, "Cost": 100 },
+  "Kitchens": { "Quantity": 100, "Cost": 100 },
+  "Others": { "Quantity": 100, "Cost": 100 },
+  "Total": { "Quantity": 100, "Cost": 100 },
+  "TotalCost": "TotalCost"
+};
+  pdfPrint(){
+    generatePdf(data).then((_) {
+    print('PDF generated successfully.');
+  });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -446,8 +475,11 @@ class _ShowAllDataState extends State<ShowAllData> {
                         ],
                       ))),
                 ),
+
               ],
             ),
+                ElevatedButton(onPressed:pdfPrint, child: Text('print')),
+
           ],
         ),
       )),
