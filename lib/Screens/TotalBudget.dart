@@ -1,9 +1,12 @@
 import 'package:constructoncostestimator/Components/TextStyels.dart';
+import 'package:constructoncostestimator/testing.dart';
 import 'package:flutter/material.dart';
+
+Map<String, dynamic> result = {};
 
 class TotalBudget extends StatefulWidget {
   final Map rawData;
-  const TotalBudget({super.key, required this.rawData});
+  TotalBudget({super.key, required this.rawData});
 
   @override
   State<TotalBudget> createState() => _TotalBudgetState();
@@ -14,8 +17,11 @@ class _TotalBudgetState extends State<TotalBudget> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    // setDataForPdf();
     dataPrint();
   }
+
+  // ignore: non_constant_identifier_names
 
   @override
   Widget build(BuildContext context) {
@@ -143,9 +149,10 @@ class _TotalBudgetState extends State<TotalBudget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Steel", style: Heading5()),
-                      Text("${calculateSteel().toString()} ton",
+                      Text("${calculateSteel().toStringAsFixed(2)} ton",
                           style: Heading5()),
-                      Text(calculateSteelCost().toString(), style: Heading5()),
+                      Text(calculateSteelCost().toStringAsFixed(2),
+                          style: Heading5()),
                     ],
                   ),
                 ],
@@ -473,6 +480,14 @@ class _TotalBudgetState extends State<TotalBudget> {
               ]),
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.06),
+
+            ElevatedButton(
+                onPressed: () {
+                  setDataForPdf();
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: ((context) => TestingLab())));
+                },
+                child: Text("PDF")),
           ]),
         ),
       ),
@@ -704,6 +719,16 @@ class _TotalBudgetState extends State<TotalBudget> {
         totalDecoCost();
 
     return totalBudget;
+  }
+
+  // ================= map for pdf ===================
+  setDataForPdf() {
+    result['NoOfBricks'] = calculateBriks();
+    setState(() {
+      print('=========');
+      print(calculateBriks());
+      print('=========');
+    });
   }
 }
 
