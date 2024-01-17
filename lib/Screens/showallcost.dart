@@ -119,7 +119,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                               //   Icons.gif_box_rounded,
                               //   color: Color.fromARGB(255, 196, 199, 13),
                               // ),
-                              child:Image.asset("images/structure.gif") ,
+                              child: Image.asset("images/structure.gif"),
                             ),
                           ),
                           const SizedBox(
@@ -165,7 +165,7 @@ class _ShowAllDataState extends State<ShowAllData> {
                               height: 20,
                               width: 20,
                               decoration: const BoxDecoration(),
-                                child: Image.asset("images/steel.gif"),
+                              child: Image.asset("images/steel.gif"),
                             ),
                           ),
                           const SizedBox(
@@ -383,7 +383,8 @@ class _ShowAllDataState extends State<ShowAllData> {
                               //   Icons.gif_box_rounded,
                               //   color: Color.fromARGB(255, 196, 199, 13),
                               // ),
-                              child: Image.asset("images/icons8-paint-roller.gif"),
+                              child:
+                                  Image.asset("images/icons8-paint-roller.gif"),
                             ),
                           ),
                           const SizedBox(
