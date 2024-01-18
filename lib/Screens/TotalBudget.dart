@@ -737,13 +737,14 @@ class _TotalBudgetState extends State<TotalBudget> {
     result['NoOfSand'] = calculateSand();
     result['CostOfSand'] = calculateSandCost();
   }
+  setdata() async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.setString('BricksNo', calculateBriks().toString());
+
+}
 }
 
-setdata() async {
-  final SharedPreferences prefs = await SharedPreferences.getInstance();
-  await prefs.setString('Bricks', 'Start');
-  await prefs.setString('Bricks', 'Start');
-}
+
 
 //  totalArea: 1.0
 //  coverdArea: 1.0
