@@ -25,6 +25,7 @@ class _UtilitiesState extends State<Utilities> {
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.04),
             Container(
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: const Color(0xff192730),
@@ -40,6 +41,7 @@ class _UtilitiesState extends State<Utilities> {
                       Text("Cost", style: Heading5Orange()),
                     ],
                   ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -48,6 +50,7 @@ class _UtilitiesState extends State<Utilities> {
                           style: Heading5Orange()),
                     ],
                   ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -56,11 +59,12 @@ class _UtilitiesState extends State<Utilities> {
                           style: Heading5Orange()),
                     ],
                   ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Electricity ", style: Heading5()),
-                      Text(CalculateElectricityCost().toStringAsFixed(2),
+                      Text("Glass ", style: Heading5()),
+                      Text(CalculateGlassCost().toStringAsFixed(2),
                           style: Heading5Orange()),
                     ],
                   ),
