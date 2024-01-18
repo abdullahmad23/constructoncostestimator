@@ -44,6 +44,7 @@ class _ShowAllDataState extends State<ShowAllData> {
     "Kitchens": {"Quantity": 100, "Cost": 100},
     "Others": {"Quantity": 100, "Cost": 100},
     "Total": {"Quantity": 100, "Cost": 100},
+    "TotalCost": {"Quantity": 00, "Cost": 100},
 
 
   };
