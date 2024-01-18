@@ -13,6 +13,7 @@ Future<void> generatePdf(Map<String, dynamic> data) async {
   final pdf = pw.Document();
 
   final font = await PdfGoogleFonts.nunitoExtraLight();
+  print(data);
 
   pdf.addPage(pw.Page(
     pageFormat: PdfPageFormat.a4,

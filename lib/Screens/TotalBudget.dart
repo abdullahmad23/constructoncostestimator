@@ -2,6 +2,7 @@ import 'package:constructoncostestimator/Components/TextStyels.dart';
 import 'package:constructoncostestimator/Screens/showallcost.dart';
 import 'package:constructoncostestimator/testing.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 Map<String, dynamic> result = {};
 
@@ -736,6 +737,12 @@ class _TotalBudgetState extends State<TotalBudget> {
     result['NoOfSand'] = calculateSand();
     result['CostOfSand'] = calculateSandCost();
   }
+}
+
+setdata() async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.setString('Bricks', 'Start');
+  await prefs.setString('Bricks', 'Start');
 }
 
 //  totalArea: 1.0

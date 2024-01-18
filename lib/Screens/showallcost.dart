@@ -21,12 +21,12 @@ class ShowAllData extends StatefulWidget {
 
 class _ShowAllDataState extends State<ShowAllData> {
   Map<String, dynamic> data = {
-    "Bricks": {"Quantity": result['NoOfBricks'], "Cost": result['costOfBrick']},
-    "Cement": {
-      "Quantity": result['NoOfCement'],
-      "Cost": result['CostOfCement']
-    },
-    "Sand": {"Quantity": result['NoOfSand'], "Cost": result['CostOfSand']},
+    // "Bricks": {"Quantity": result['NoOfBricks'], "Cost": result['costOfBrick']},
+    // "Cement": {
+    //   "Quantity": result['NoOfCement'],
+    //   "Cost": result['CostOfCement']
+    // },
+    // "Sand": {"Quantity": result['NoOfSand'], "Cost": result['CostOfSand']},
     "Crush": {"Quantity": 100, "Cost": 100},
     "Labour": {"Quantity": 100, "Cost": 100},
     "Steel": {"Quantity": 100, "Cost": 100},
