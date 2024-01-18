@@ -15,10 +15,11 @@ class _TestingLabState extends State<TestingLab> {
     super.initState();
     print("==================");
     print(result['NoOfBricks']);
+    print(result['costOfBrick']);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }

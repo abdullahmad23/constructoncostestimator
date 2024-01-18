@@ -23,20 +23,25 @@ Future<void> generatePdf(Map<String, dynamic> data) async {
         children: [
           pw.Text(
             'Cost Estimation Report',
-            style: pw.TextStyle(font: font, fontSize: 20, fontWeight: pw.FontWeight.bold),
+            style: pw.TextStyle(
+                font: font, fontSize: 20, fontWeight: pw.FontWeight.bold),
           ),
           pw.SizedBox(height: 10),
           pw.Table(
             border: pw.TableBorder.all(),
             columnWidths: {
-              0: pw.FlexColumnWidth(2),
-              1: pw.FlexColumnWidth(1),
-              2: pw.FlexColumnWidth(1),
+              0: const pw.FlexColumnWidth(2),
+              1: const pw.FlexColumnWidth(1),
+              2: const pw.FlexColumnWidth(1),
             },
             children: [
               _buildTableRow(['Item', 'Quantity', 'Cost']),
               for (var entry in data.entries)
-                _buildTableRow([entry.key, entry.value['Quantity'].toString(), entry.value['Cost'].toString()]),
+                _buildTableRow([
+                  entry.key,
+                  entry.value['Quantity'].toString(),
+                  entry.value['Cost'].toString(),
+                ]),
             ],
           ),
         ],
@@ -57,6 +62,6 @@ Future<void> generatePdf(Map<String, dynamic> data) async {
 
 pw.TableRow _buildTableRow(List<String> cells) {
   return pw.TableRow(
-    children: cells.map((cell) => pw.Text(cell) ).toList(),
+    children: cells.map((cell) => pw.Text(cell)).toList(),
   );
 }

@@ -1,4 +1,5 @@
 import 'package:constructoncostestimator/Components/TextStyels.dart';
+import 'package:constructoncostestimator/Screens/showallcost.dart';
 import 'package:constructoncostestimator/testing.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +7,7 @@ Map<String, dynamic> result = {};
 
 class TotalBudget extends StatefulWidget {
   final Map rawData;
-  TotalBudget({super.key, required this.rawData});
+  const TotalBudget({super.key, required this.rawData});
 
   @override
   State<TotalBudget> createState() => _TotalBudgetState();
@@ -484,10 +485,14 @@ class _TotalBudgetState extends State<TotalBudget> {
             ElevatedButton(
                 onPressed: () {
                   setDataForPdf();
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: ((context) => TestingLab())));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => ShowAllData(
+                                rawData: result,
+                              ))));
                 },
-                child: Text("PDF")),
+                child: const Text("PDF")),
           ]),
         ),
       ),
@@ -725,11 +730,11 @@ class _TotalBudgetState extends State<TotalBudget> {
   // ================= map for pdf ===================
   setDataForPdf() {
     result['NoOfBricks'] = calculateBriks();
-    setState(() {
-      print('=========');
-      print(calculateBriks());
-      print('=========');
-    });
+    result['costOfBrick'] = calculateBriksCost();
+    result['NoOfCement'] = calculateCement();
+    result['CostOfCement'] = calculateCementCost();
+    result['NoOfSand'] = calculateSand();
+    result['CostOfSand'] = calculateSandCost();
   }
 }
 

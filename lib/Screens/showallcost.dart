@@ -20,34 +20,38 @@ class ShowAllData extends StatefulWidget {
 }
 
 class _ShowAllDataState extends State<ShowAllData> {
-Map<String, dynamic> data={
-  "Bricks": { "Quantity": 100, "Cost": 100 },
-  "Cement": { "Quantity": 100, "Cost": 100 },
-  "Sand": { "Quantity": 100, "Cost": 100 },
-  "Crush": { "Quantity": 100, "Cost": 100 },
-  "Labour": { "Quantity": 100, "Cost": 100 },
-  "Steel": { "Quantity": 100, "Cost": 100 },
-  "Material&Labour": { "Quantity": 100, "Cost": 100 },
-  "Plumbing": { "Quantity": 100, "Cost": 100 },
-  "Electrical": { "Quantity": 100, "Cost": 100 },
-  "Glass": { "Quantity": 100, "Cost": 100 },
-  "UtilitiesTotal": { "Quantity": 100, "Cost": 100 },
-  "Windows": { "Quantity": 100, "Cost": 100 },
-  "Dorrs": { "Quantity": 100, "Cost": 100 },
-  "W&DTotal": { "Quantity": 100, "Cost": 100 },
-  "Colouring": { "Quantity": 100, "Cost": 100 },
-  "RoofDecoration": { "Quantity": 100, "Cost": 100 },
-  "Washroom": { "Quantity": 100, "Cost": 100 },
-  "Kitchens": { "Quantity": 100, "Cost": 100 },
-  "Others": { "Quantity": 100, "Cost": 100 },
-  "Total": { "Quantity": 100, "Cost": 100 },
-  "TotalCost": "TotalCost"
-};
-  pdfPrint(){
+  Map<String, dynamic> data = {
+    "Bricks": {"Quantity": result['NoOfBricks'], "Cost": result['costOfBrick']},
+    "Cement": {
+      "Quantity": result['NoOfCement'],
+      "Cost": result['CostOfCement']
+    },
+    "Sand": {"Quantity": result['NoOfSand'], "Cost": result['CostOfSand']},
+    "Crush": {"Quantity": 100, "Cost": 100},
+    "Labour": {"Quantity": 100, "Cost": 100},
+    "Steel": {"Quantity": 100, "Cost": 100},
+    "Material&Labour": {"Quantity": 100, "Cost": 100},
+    "Plumbing": {"Quantity": 100, "Cost": 100},
+    "Electrical": {"Quantity": 100, "Cost": 100},
+    "Glass": {"Quantity": 100, "Cost": 100},
+    "UtilitiesTotal": {"Quantity": 100, "Cost": 100},
+    "Windows": {"Quantity": 100, "Cost": 100},
+    "Dorrs": {"Quantity": 100, "Cost": 100},
+    "W&DTotal": {"Quantity": 100, "Cost": 100},
+    "Colouring": {"Quantity": 100, "Cost": 100},
+    "RoofDecoration": {"Quantity": 100, "Cost": 100},
+    "Washroom": {"Quantity": 100, "Cost": 100},
+    "Kitchens": {"Quantity": 100, "Cost": 100},
+    "Others": {"Quantity": 100, "Cost": 100},
+    "Total": {"Quantity": 100, "Cost": 100},
+    "TotalCost": "TotalCost"
+  };
+  pdfPrint() {
     generatePdf(data).then((_) {
-    print('PDF generated successfully.');
-  });
+      print('PDF generated successfully.');
+    });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,7 +80,7 @@ Map<String, dynamic> data={
                     height: 120,
                     width: 100,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 245, 246, 247),
+                      color: const Color.fromARGB(255, 245, 246, 247),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Center(
@@ -102,7 +106,7 @@ Map<String, dynamic> data={
                           const SizedBox(
                             height: 15,
                           ),
-                          Text(
+                          const Text(
                             'Total Cost',
                             // style: Heading5(),
                           ),
@@ -124,7 +128,7 @@ Map<String, dynamic> data={
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 250, 251, 252),
+                        color: const Color.fromARGB(255, 250, 251, 252),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -154,7 +158,7 @@ Map<String, dynamic> data={
                           const SizedBox(
                             height: 15,
                           ),
-                          Text(
+                          const Text(
                             'Foundation & \n Structure',
                             // style: Heading5(),
                           ),
@@ -174,7 +178,7 @@ Map<String, dynamic> data={
                     height: 120,
                     width: 100,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 250, 251, 252),
+                      color: const Color.fromARGB(255, 250, 251, 252),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Center(
@@ -200,7 +204,7 @@ Map<String, dynamic> data={
                           const SizedBox(
                             height: 15,
                           ),
-                          Text(
+                          const Text(
                             'Steel Cost',
                             // style: Heading5(),
                           ),
@@ -230,7 +234,7 @@ Map<String, dynamic> data={
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 247, 248, 248),
+                        color: const Color.fromARGB(255, 247, 248, 248),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -260,7 +264,7 @@ Map<String, dynamic> data={
                           const SizedBox(
                             height: 15,
                           ),
-                          Text(
+                          const Text(
                             'Floor Cost',
                             // style: Heading5(),
                           ),
@@ -280,7 +284,7 @@ Map<String, dynamic> data={
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 240, 241, 241),
+                        color: const Color.fromARGB(255, 240, 241, 241),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -293,7 +297,7 @@ Map<String, dynamic> data={
                             height: 50,
                             width: 50,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 248, 249, 250),
+                              color: const Color.fromARGB(255, 248, 249, 250),
                               borderRadius: BorderRadius.circular(100),
                             ),
                             child: Container(
@@ -310,7 +314,7 @@ Map<String, dynamic> data={
                           const SizedBox(
                             height: 15,
                           ),
-                          Text(
+                          const Text(
                             'Utilities Cost',
                             // style: Heading5(),
                           ),
@@ -330,7 +334,7 @@ Map<String, dynamic> data={
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 244, 244, 245),
+                        color: const Color.fromARGB(255, 244, 244, 245),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -360,7 +364,7 @@ Map<String, dynamic> data={
                           const SizedBox(
                             height: 15,
                           ),
-                          Text(
+                          const Text(
                             'Windows &\n Doors Cost',
                             // style: Heading5(),
                           ),
@@ -388,7 +392,7 @@ Map<String, dynamic> data={
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 250, 251, 252),
+                        color: const Color.fromARGB(255, 250, 251, 252),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -419,7 +423,7 @@ Map<String, dynamic> data={
                           const SizedBox(
                             height: 15,
                           ),
-                          Text(
+                          const Text(
                             'Colouring\n   Cost',
                             // style: Heading5(),
                           ),
@@ -439,7 +443,7 @@ Map<String, dynamic> data={
                       height: 120,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 251, 254, 255),
+                        color: const Color.fromARGB(255, 251, 254, 255),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -452,7 +456,7 @@ Map<String, dynamic> data={
                             height: 50,
                             width: 50,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 243, 245, 247),
+                              color: const Color.fromARGB(255, 243, 245, 247),
                               borderRadius: BorderRadius.circular(100),
                             ),
                             child: Container(
@@ -469,18 +473,25 @@ Map<String, dynamic> data={
                           const SizedBox(
                             height: 15,
                           ),
-                          Text(
+                          const Text(
                             'Decoration\n    Cost',
                             // style: TextStyle(c),
                           ),
                         ],
                       ))),
                 ),
-
               ],
             ),
-                ElevatedButton(onPressed:pdfPrint, child: Text('print')),
-
+            const SizedBox(
+              height: 15,
+            ),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(MediaQuery.of(context).size.width * 0.5,
+                      MediaQuery.of(context).size.width * 0.13),
+                ),
+                onPressed: pdfPrint,
+                child: const Text('print')),
           ],
         ),
       )),
