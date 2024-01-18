@@ -58,7 +58,10 @@ Future<void> generatePdf(Map<String, dynamic> data) async {
 
   // Save the PDF to the file
   final File file = File(path);
-  await file.writeAsBytes(await pdf.save());
+  await file.writeAsBytes(await pdf.save()).then((value)  {
+    print("FIle Location");
+    print(value);
+  });
 }
 
 pw.TableRow _buildTableRow(List<String> cells) {
