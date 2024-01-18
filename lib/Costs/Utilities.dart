@@ -40,6 +40,30 @@ class _UtilitiesState extends State<Utilities> {
                       Text("Cost", style: Heading5Orange()),
                     ],
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Plumbing ", style: Heading5()),
+                      Text(CalculatePlumbingCost().toStringAsFixed(2),
+                          style: Heading5Orange()),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Electricity ", style: Heading5()),
+                      Text(CalculateElectricityCost().toStringAsFixed(2),
+                          style: Heading5Orange()),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Electricity ", style: Heading5()),
+                      Text(CalculateElectricityCost().toStringAsFixed(2),
+                          style: Heading5Orange()),
+                    ],
+                  ),
                 ],
               ),
             ),
