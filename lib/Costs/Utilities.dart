@@ -49,16 +49,6 @@ class _UtilitiesState extends State<Utilities> {
     );
   }
 
-  double floorArea() {
-    double floorArea = 1.3;
-    return (widget.rawData["coverdArea"] * floorArea);
-  }
-
-  double totalContructionCost() {
-    double costPerSqft = 2000;
-    return (widget.rawData["coverdArea"] * costPerSqft);
-  }
-
   double CalculatePlumbingCost() {
     int plumbingcostperfeet = 50;
     double plumbingcost = ((floorArea() / 1.3) * plumbingcostperfeet);
@@ -75,5 +65,15 @@ class _UtilitiesState extends State<Utilities> {
         (widget.rawData['BedRooms'] + widget.rawData['LivingRooms'] + 0.5);
     int oneWindowGlass = 24 * 155;
     return (glassCost * oneWindowGlass);
+  }
+
+  double floorArea() {
+    double floorArea = 1.3;
+    return (widget.rawData["coverdArea"] * floorArea);
+  }
+
+  double totalContructionCost() {
+    double costPerSqft = 2000;
+    return (widget.rawData["coverdArea"] * costPerSqft);
   }
 }

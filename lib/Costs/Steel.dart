@@ -65,7 +65,7 @@ class _FoundationState extends State<Steel> {
 
 // ============== Calculate Total steel in tons  =================
   double calculateSteel() {
-    double steelPerSqft = 0.00440; // how many steel use in 1sq.ft area in tons
+    double steelPerSqft = 0.004; // how many steel use in 1sq.ft area in tons
     return (widget.rawData["coverdArea"] * steelPerSqft);
   }
 

@@ -564,7 +564,7 @@ class _TotalBudgetState extends State<TotalBudget> {
 
   // ============== Calculate Total steel in tons  =================
   double calculateSteel() {
-    double steelPerSqft = 0.00440; // how many steel use in 1sq.ft area in tons
+    double steelPerSqft = 0.004; // how many steel use in 1sq.ft area in tons
     return (widget.rawData["coverdArea"] * steelPerSqft);
   }
 
@@ -626,7 +626,8 @@ class _TotalBudgetState extends State<TotalBudget> {
     int numOfDoors = (widget.rawData['BedRooms'] +
         widget.rawData['BathRooms'] +
         widget.rawData['DrawingRooms'] +
-        widget.rawData['LivingRooms']);
+        widget.rawData['LivingRooms'] +
+        widget.rawData['Kitchens']);
     return numOfDoors;
   }
 
@@ -669,12 +670,12 @@ class _TotalBudgetState extends State<TotalBudget> {
   }
 
   double CalculateRoofDecorationCost() {
-    double costPerRoof = 250; //Avrg decoration cost per square feet
+    double costPerRoof = 2000; //Avrg decoration cost per square feet
     return (CalculateRoofDecoration() * costPerRoof);
   }
 
   double CalculateWashRoomDecoCost() {
-    double costPerWashRoom = 300; //Avrg decoration cost per square feet
+    double costPerWashRoom = 3000; //Avrg decoration cost per square feet
     return (widget.rawData['BathRooms'] * costPerWashRoom);
   }
 
