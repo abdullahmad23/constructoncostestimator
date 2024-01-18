@@ -37,6 +37,8 @@ dependencies:
   google_fonts: ^6.1.0
   flutter_easyloading: ^3.0.5
   flutter_gif: ^0.0.4
+  pdf: ^3.10.7
+  printing: ^5.11.1
 
 dev_dependencies:
   flutter_test:
