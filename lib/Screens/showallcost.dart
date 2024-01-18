@@ -41,7 +41,7 @@ Map<String, dynamic> data={
   "Kitchens": { "Quantity": 100, "Cost": 100 },
   "Others": { "Quantity": 100, "Cost": 100 },
   "Total": { "Quantity": 100, "Cost": 100 },
-  "TotalCost": "TotalCost"
+
 };
   pdfPrint(){
     generatePdf(data).then((_) {
