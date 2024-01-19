@@ -515,7 +515,14 @@ class _TotalBudgetState extends State<TotalBudget> {
 // ============== Calculate Total Briks =================
   double calculateBriks() {
     double BriksPerSqft = 6.55; // how many briks use in 1sq.ft area
-    return (widget.rawData["coverdArea"] * BriksPerSqft);
+    int Norooms = (widget.rawData['BedRooms'] +
+        widget.rawData['LivingRooms'] +
+        widget.rawData['Kitchens']);
+    double DrawingRooms = widget.rawData['DrawingRooms'] * 320;
+    double bathroomArea = widget.rawData['BathRooms'] * 38.0;
+    double roomArea = Norooms * 225;
+    double totalArea = DrawingRooms + bathroomArea + roomArea;
+    return (totalArea * BriksPerSqft);
   }
 
 // ============== Calculate Total Briks Cost =================

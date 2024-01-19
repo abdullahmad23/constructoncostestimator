@@ -24,8 +24,6 @@ class ShowAllData extends StatefulWidget {
 }
 
 class _ShowAllDataState extends State<ShowAllData> {
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -437,10 +435,6 @@ class _ShowAllDataState extends State<ShowAllData> {
                               height: 20,
                               width: 20,
                               decoration: const BoxDecoration(),
-                              // child: const Icon(
-                              //   Icons.gif_box_rounded,
-                              //   color: Color.fromARGB(255, 196, 199, 13),
-                              // ),
                               child: Image.asset("images/icons8-warehouse.gif"),
                             ),
                           ),
@@ -449,6 +443,56 @@ class _ShowAllDataState extends State<ShowAllData> {
                           ),
                           const Text(
                             'Decoration\n    Cost',
+                            // style: TextStyle(c),
+                          ),
+                        ],
+                      ))),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => decoration(
+                                  rawData: widget.rawData,
+                                )));
+                  },
+                  child: Container(
+                      height: 120,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 251, 254, 255),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Center(
+                          child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 243, 245, 247),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Container(
+                              height: 20,
+                              width: 20,
+                              decoration: const BoxDecoration(),
+                              child: Image.asset("images/icons8-warehouse.gif"),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          const Text(
+                            'Tiles Cost',
                             // style: TextStyle(c),
                           ),
                         ],
