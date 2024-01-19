@@ -7,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 Map<String, dynamic> result = {};
 
 class TotalBudget extends StatefulWidget {
-  final Map rawData;
+  final Map<String, dynamic> rawData;
   const TotalBudget({super.key, required this.rawData});
 
   @override
@@ -486,12 +486,8 @@ class _TotalBudgetState extends State<TotalBudget> {
             ElevatedButton(
                 onPressed: () {
                   setDataForPdf();
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: ((context) => ShowAllData(
-                                rawData: result,
-                              ))));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: ((context) => TestingLab())));
                 },
                 child: const Text("PDF")),
           ]),
@@ -737,11 +733,11 @@ class _TotalBudgetState extends State<TotalBudget> {
     result['NoOfSand'] = calculateSand();
     result['CostOfSand'] = calculateSandCost();
   }
-  setdata() async {
-  final SharedPreferences prefs = await SharedPreferences.getInstance();
-  await prefs.setString('BricksNo', calculateBriks().toString());
 
-}
+  setdata() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('BricksNo', calculateBriks().toString());
+  }
 }
 
 

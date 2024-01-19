@@ -13,7 +13,11 @@ import 'package:flutter/material.dart';
 
 class ShowAllData extends StatefulWidget {
   Map<String, dynamic> rawData;
-  ShowAllData({super.key, required this.rawData});
+
+  ShowAllData({
+    super.key,
+    required this.rawData,
+  });
 
   @override
   State<ShowAllData> createState() => _ShowAllDataState();
@@ -482,16 +486,6 @@ class _ShowAllDataState extends State<ShowAllData> {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 15,
-            ),
-            ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(MediaQuery.of(context).size.width * 0.5,
-                      MediaQuery.of(context).size.width * 0.13),
-                ),
-                onPressed: pdfPrint,
-                child: const Text('print')),
           ],
         ),
       )),
