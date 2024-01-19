@@ -486,8 +486,10 @@ class _TotalBudgetState extends State<TotalBudget> {
             ElevatedButton(
                 onPressed: () {
                   setDataForPdf();
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: ((context) => TestingLab())));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => const TestingLab())));
                 },
                 child: const Text("PDF")),
           ]),
@@ -732,6 +734,29 @@ class _TotalBudgetState extends State<TotalBudget> {
     result['CostOfCement'] = calculateCementCost();
     result['NoOfSand'] = calculateSand();
     result['CostOfSand'] = calculateSandCost();
+    result['NoOfCrush'] = calculateCrush();
+    result['costOfCrush'] = calculateCrushCost();
+    result['costOfLabour'] = calculateLabourCost();
+    result['NoOfSteel'] = calculateSteel();
+    result['CostOfSteel'] = calculateSteelCost();
+    result['CostOfPlumbing'] = CalculatePlumbingCost();
+    result['CostOfElectricity'] = CalculateElectricityCost();
+    result['CostOfGlass'] = CalculateGlassCost();
+    result['CostOfUtilities'] = CalculateUtilitiesCost();
+    result['NoOfWindow'] = CalculateWindow();
+    result['CostOfWindow'] = CalculateWindowCost();
+    // ab yahan
+    result['NoOfDoor'] = CalculateDoor();
+    result['CostOfDoor'] = CalculateDoorCost();
+    result['CostOfwD'] = totalCostWD();
+    result['CostOfColouring'] = calculateColouringCost();
+    result['NoOfRD'] = CalculateRoofDecoration();
+    result['CostOfRD'] = CalculateRoofDecorationCost();
+    result['CostOfWashroomDeco'] = CalculateWashRoomDecoCost();
+    result['CostOfKitchendeco'] = CalculateKitchenDecoCost();
+    result['CostOfOtherDeco'] = otherDecoCost();
+    result['CostOfTotalDeco'] = totalDecoCost();
+    result['CostOfTotalEstimastedBudget'] = totalEstimatedBugdet();
   }
 
   setdata() async {
@@ -739,8 +764,6 @@ class _TotalBudgetState extends State<TotalBudget> {
     await prefs.setString('BricksNo', calculateBriks().toString());
   }
 }
-
-
 
 //  totalArea: 1.0
 //  coverdArea: 1.0
