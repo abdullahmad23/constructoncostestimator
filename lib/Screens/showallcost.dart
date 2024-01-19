@@ -24,49 +24,7 @@ class ShowAllData extends StatefulWidget {
 }
 
 class _ShowAllDataState extends State<ShowAllData> {
-  Map<String, dynamic> data = {
-    "Bricks": {"Quantity": result['NoOfBricks'], "Cost": result['costOfBrick']},
-    "Cement": {
-      "Quantity": result['NoOfCement'],
-      "Cost": result['CostOfCement']
-    },
-    "Sand": {"Quantity": result['NoOfSand'], "Cost": result['CostOfSand']},
-    "Crush": {"Quantity": result['NoOfCrush'], "Cost": result['costOfCrush']},
-    "Labour": {
-      "Quantity": 12,
-      "Cost": ['costOfLabour']
-    },
-    "Steel": {"Quantity": result['NoOfSteel'], "Cost": result['CostOfSteel']},
-    // "Material&Labour": {"Quantity": 100, "Cost": 100},
-    "Plumbing": {"Quantity": 'N/A', "Cost": result['CostOfPlumbing']},
-    "Electrical": {"Quantity": 'N/A', "Cost": result['CostOfElectricity']},
-    "Glass": {"Quantity": 'N/A', "Cost": result['CostOfGlass']},
-    "UtilitiesTotal": {"Quantity": 'N/A', "Cost": result['CostOfUtilities']},
-    "Windows": {
-      "Quantity": result['NoOfWindow'],
-      "Cost": result['CostOfWindow']
-    },
-    "Dorrs": {"Quantity": result['NoOfDoor'], "Cost": result['CostOfDoor']},
-    "W&DTotal": {"Quantity": 'N/A', "Cost": result['CostOfwD']},
-    "Colouring": {"Quantity": 'N/A', "Cost": result['CostOfColouring']},
-    "RoofDecoration": {
-      "Quantity": result['NoOfRD'],
-      "Cost": result['CostOfRD']
-    },
-    "Washroom": {"Quantity": 'N/A', "Cost": result['CostOfWashroomDeco']},
-    "Kitchens": {"Quantity": 'N/A', "Cost": result['CostOfKitchendeco']},
-    "Others": {"Quantity": 'N/A', "Cost": result['CostOfOtherDeco']},
-    "Total": {"Quantity": 'N/A', "Cost": result['CostOfTotalDeco']},
-    "TotalCost": {
-      "Quantity": 'N/A',
-      "Cost": result['CostOfTotalEstimastedBudget']
-    },
-  };
-  pdfPrint() {
-    generatePdf(data).then((_) {
-      print('PDF generated file.');
-    });
-  }
+  
 
   @override
   Widget build(BuildContext context) {

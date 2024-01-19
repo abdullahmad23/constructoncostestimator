@@ -1,3 +1,4 @@
+import 'package:constructoncostestimator/Components/Button.dart';
 import 'package:constructoncostestimator/Components/TextStyels.dart';
 import 'package:constructoncostestimator/Screens/showallcost.dart';
 import 'package:constructoncostestimator/testing.dart';
@@ -483,15 +484,14 @@ class _TotalBudgetState extends State<TotalBudget> {
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.06),
 
-            ElevatedButton(
-                onPressed: () {
-                  setDataForPdf();
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: ((context) => const TestingLab())));
-                },
-                child: const Text("PDF")),
+            Button(
+              text: "Generate PDF",
+              method: () {
+                setDataForPdf();
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => TestingLab())));
+              },
+            )
           ]),
         ),
       ),

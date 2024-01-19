@@ -6,7 +6,11 @@ import 'package:google_fonts/google_fonts.dart';
 class Button extends StatelessWidget {
   Function() method;
   String text;
-  Button({super.key, required this.text, required this.method});
+  Button({
+    super.key,
+    required this.text,
+    required this.method,
+  });
 
   @override
   Widget build(BuildContext context) {
