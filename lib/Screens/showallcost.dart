@@ -45,8 +45,6 @@ class _ShowAllDataState extends State<ShowAllData> {
     "Others": {"Quantity": 100, "Cost": 100},
     "Total": {"Quantity": 100, "Cost": 100},
     "TotalCost": {"Quantity": 00, "Cost": 100},
-
-
   };
   pdfPrint() {
     generatePdf(data).then((_) {
