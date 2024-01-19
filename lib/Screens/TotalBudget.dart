@@ -701,7 +701,7 @@ class _TotalBudgetState extends State<TotalBudget> {
   }
 
   double CalculateWashRoomDecoCost() {
-    double costPerWashRoom = 3000; //Avrg decoration cost per square feet
+    double costPerWashRoom = 15000; //Avrg decoration cost per square feet
     return (widget.rawData['BathRooms'] * costPerWashRoom);
   }
 
